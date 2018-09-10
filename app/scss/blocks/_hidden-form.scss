@@ -1,0 +1,38 @@
+.hidden-form {
+	background: #fff;
+	max-width: 500px;
+	&__wrap {
+		padding: 0;
+	}
+	&__head {
+		height: 210px;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		text-align: left;
+		padding: 20px;
+		h4 {
+			margin-bottom: 10px;
+		}
+		&--buy {
+			background: url('../img/hidden-buy.jpg') no-repeat;
+			background-size: cover;
+		}
+		&--download {
+			background: url('../img/hidden-download.jpg') no-repeat;
+			background-size: cover;
+		}
+		&--question {
+			background: url('../img/hidden-question.jpg') no-repeat;
+			background-size: cover;
+		}
+	}
+	&__body {
+		padding: 20px;
+	}
+}
+.fancybox-close-small {
+	background: rgba(0,0,0, .6);
+	color: #fff;
+}

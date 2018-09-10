@@ -1,0 +1,89 @@
+
+  .pulse{
+    position: relative;
+    &>.ink {
+      display: block;
+      position: absolute;
+      border-radius: 100%;
+      transform: scale(0);
+      background: rgba(255, 255, 255, 0.3);
+    }
+    &>.animate {
+      animation: pulse 1.2s linear;
+    }
+
+    @-webkit-keyframes pulse {
+      100% {
+        opacity: 0;
+        -webkit-transform: scale(2.5);
+      }
+    }
+
+    @keyframes pulse {
+      100% {
+        opacity: 0;
+        -webkit-transform: scale(2.5);
+        transform: scale(2.5);
+      }
+    }
+  }
+
+  .shine{
+    &:after{
+      content: "";
+      display: block;
+      width: 30px;
+      height: 300px;
+      margin-left: 60px;
+      background: rgba(255, 255, 255, .3);
+      box-shadow: 0 0 55px  rgba(255, 255, 255, .3);
+      position: absolute;
+      left: -40px;
+      top: -150px;
+      z-index: 1;
+      transform: rotate(45deg);
+      transition: all .1s;
+      animation-name: shine;
+      animation-duration: 5s;
+      animation-delay: .1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite
+    }
+
+
+    @-webkit-keyframes shine {
+      0% {
+        left: -30px;
+        margin-left: 0
+      }
+      30% {
+        left: 110%;
+        margin-left: 80px
+      }
+      100% {
+        left: 110%;
+        margin-left: 80px
+      }
+    }
+
+    @keyframes shine {
+      0% {
+
+        width: 30px;
+        left: -30px;
+        margin-left: 0
+      }
+      30% {
+        left: 110%;
+
+        width: 50px;
+        margin-left: 80px
+      }
+      100% {
+
+        width: 65px;
+        left: 110%;
+        margin-left: 80px
+      }
+    }
+  }

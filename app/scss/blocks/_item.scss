@@ -1,0 +1,145 @@
+.item {
+	display: flex;
+	&__img {
+		width: 295px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-right: 20px;
+	}
+	&__name {
+		text-transform: uppercase;
+		margin-top: 0;
+		font-size: 30px;
+	}
+	&__galery {
+		img {
+			max-width: 295px;
+		}
+		.owl-dots {
+			position: relative;
+			text-align: center;
+			.active span {
+				border: 1px solid $accent;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				border-bottom: 1px dashed rgba(0,0,0, .3);
+				width: calc(100% - 80px);
+				height: 1px;
+				left: 40px;
+				top: 7px;
+			}
+
+			span {
+				display: block;
+				width: 14px;
+				background: #FAFAFA;
+				position: relative;
+				height: 14px;
+				border-radius: 50%;
+				border: 1px solid rgba(0,0,0, .4);
+				margin: 0 18px;
+				&:hover {
+					border: 1px solid $accent;
+					transition: .3s;
+				}
+			}
+		}
+		.owl-nav {
+			bottom: 32px;
+			position: absolute;
+			width: 100%;
+			.owl-prev, .owl-next {
+				position: absolute;
+				z-index: 10;
+				i {
+					font-size: 40px;
+					color: rgba(0,0,0, .3);
+					&:hover {
+						color: $accent;
+						transition: .3s;
+					}
+				}
+			}
+			.owl-prev {
+				left: 0;
+			}
+			.owl-next {
+				right: 0;
+			}
+		}
+	}
+	&__content {
+
+	}
+	&__adv {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__head-item {
+		flex: 1;
+		width: 295px;
+		margin-right: 20px;
+		&:nth-child(3) {
+			margin-right: 0;
+		}
+	}
+	&__head-name {
+		font-weight: 700;
+		span {
+			background: $accent;
+			color: #fff;
+			padding: 5px 10px;
+			border-radius: 50%;
+			margin-right: 5px;
+		}
+	}
+	&__char-name {
+		font-size: 26px;
+		font-weight: 700;
+		position: relative;
+		padding-bottom: 10px;
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 20px;
+			height: 1px;
+			background: rgba(0,0,0, .4);
+		}
+	}
+	&__char {
+		display: flex;
+		ul {
+			list-style-type: none;
+			font-size: 15px;
+			padding-left: 0;
+			flex: 1;
+			margin-right: 20px;
+			width: 450px;
+			&:nth-child(2) {
+				margin-right: 0;
+			}
+			li {
+				display: flex;
+				justify-content: space-between;
+				border-bottom: 1px dashed rgba(0,0,0, .4);
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&__char-t1 {
+		width: 250px;
+	}
+	&__char-t2 {
+		width: 220px;
+		font-weight: 500;
+	}
+	&__desc-text {
+		margin-bottom: 0;
+		font-size: 16px;
+	}
+}

@@ -1,0 +1,40 @@
+.price-big {
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	&__new {
+		flex: 1;
+		border-right: 1px dashed rgba(0,0,0, .4);
+		.price-big__numb {
+			font-weight: 900;
+		}
+	}
+	&__old {
+		flex: 1;
+		.price-big__numb {
+			color: rgba(0,0,0, .4);
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 90%;
+				height: 2px;
+				left: 5%;
+				background: rgba(0,0,0, .2);
+				top: 50%;
+				transform: rotate(353deg);
+
+			}
+		}
+	}
+	&__desc {
+		display: block;
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	&__numb {
+		display: block;
+		font-size: 32px;
+
+	}
+}

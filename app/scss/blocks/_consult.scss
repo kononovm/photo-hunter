@@ -1,0 +1,29 @@
+.consult {
+	display: flex;
+	margin-bottom: 40px;
+	&__page {
+		background: url('../img/bg-consult.jpg') no-repeat;
+		background-size: cover;
+	}
+	&__img {
+		width: 400px;
+		flex-shrink: 0;
+		margin-right: 20px;
+		img {
+			max-width: 100%;
+		}
+	}
+	&__content {
+		background: rgba(255,255,255, .9);
+		border-radius: 5px;
+		box-shadow: $shadow;
+		padding: 20px;
+	}
+	&__text {
+		font-size: 16px;
+	}
+	&__form {
+		max-width: 400px;
+		margin: 0 auto;
+	}
+}

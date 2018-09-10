@@ -1,0 +1,2184 @@
+<?require_once __DIR__."/../vendor/csrf.php";$c = csrf::setToken();?>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+
+<!--
+
+Телефон
+
+<div class="phone">
+	<img src="img/icons/phone.svg" alt="Телефон" class="phone__icon">
+	<div class="phone__wrap">
+		<a href="tel:+78005552739" class="phone__number">8 (800) 555-27-39</a>
+		<p class="phone__desc">Бесплатно по России</p>
+	</div>
+</div>
+
+Кнопка на Поп-Ап
+
+data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" data-pprice="0" href="javascript:;"
+
+Поп-Ап Изображение
+
+<a href="img/galery/item1_1@2x.jpg" data-fancybox="images" data-caption="">
+	<img class="main-content__item-img" src="img/galery/item1_1.jpg" alt="">
+</a>
+
+Форма
+
+<form action="/send_new.php" method="post" onsubmit="if(this.name.value==&#39;&#39;){alert(&#39;Введите Ваше имя&#39;);return false}if(this.phone.value==&#39;&#39;){alert(&#39;Введите Ваш номер телефона&#39;);return false}return true;">
+	<input class="form__input" type="text" name='name' required placeholder="Введите Имя...">
+	<input class="form__input" type="text" name='phone' required placeholder="Введите Номер телефона...">
+	<input type="hidden" name='variant' value="" >
+	<input type="hidden" name="type" value="header">
+	<input type="hidden" name='landing' value="" >
+	<input type="hidden" name='category_title' value="">
+	<input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
+	<input type="hidden" name='product_title' class="product_title" value="">
+	<button class="btn form__btn"></button>
+</form>
+
+-->
+
+
+<section class="main__page">
+
+	<header class="header">
+		<div class="header__logo">
+            <a href="/">
+                <img src="img/logo.png" alt="Photo-Hunter">
+            </a>
+            <p>Интернет-Магазин<br>Фотоловушек</p>
+		</div>
+		<nav class="header__nav">
+			<a href="#desc" class="scroll line line--accent">О фотоловушке</a>
+			<a href="#prim" class="scroll line line--accent">Сферы применения</a>
+			<a href="#cat" class="scroll line line--accent">Каталог</a>
+			<a href="#service" class="scroll line line--accent">Сервис</a>
+			<a href="#dev" class="scroll line line--accent">Доставка</a>
+			<a href="#pay" class="scroll line line--accent">Оплата</a>
+			<a href="#cont" class="scroll line line--accent">Контакты</a>
+		</nav>
+
+
+        <div class="header__right">
+        
+            <a href="https://wa.me/79990342210" class="header__wts">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 27.963 27.963">
+                  <g id="whatsapp" transform="translate(0 0)">
+                    <path id="WhatsApp-2" data-name="WhatsApp" class="cls-1" d="M27.963,13.621A13.75,13.75,0,0,1,7.6,25.548L0,27.963l2.478-7.308a13.478,13.478,0,0,1-1.97-7.033,13.728,13.728,0,0,1,27.455,0ZM14.236,2.169A11.51,11.51,0,0,0,2.694,13.621a11.332,11.332,0,0,0,2.2,6.714L3.451,24.589l4.435-1.41a11.553,11.553,0,0,0,17.891-9.557A11.511,11.511,0,0,0,14.236,2.169Zm6.932,14.589c-.085-.139-.309-.223-.645-.39s-1.992-.975-2.3-1.086-.533-.167-.757.167S16.6,16.536,16.4,16.758s-.392.251-.729.084a9.21,9.21,0,0,1-2.706-1.657,10.066,10.066,0,0,1-1.872-2.312c-.2-.334-.021-.515.148-.681.152-.15.337-.39.5-.585a2.238,2.238,0,0,0,.336-.557.608.608,0,0,0-.028-.585c-.084-.167-.757-1.81-1.038-2.478s-.56-.557-.757-.557S9.839,7.4,9.615,7.4a1.242,1.242,0,0,0-.9.418A3.733,3.733,0,0,0,7.54,10.605a6.46,6.46,0,0,0,1.374,3.453c.168.222,2.327,3.7,5.748,5.04s3.421.89,4.038.835a3.4,3.4,0,0,0,2.272-1.587A2.783,2.783,0,0,0,21.168,16.758Z"/>
+                  </g>
+                </svg>
+            </a>
+            <a href="tel:88005552739" class="header__phone">
+                <p>8 (800) 555-27-39</p>
+                <span>Бесплатно по России</span>
+            </a>
+            <a href="tel:88005552739" class="header__phone--hidden">
+                <i class="material-icons">add</i>
+            </a>
+            <a href="#" class="header__menu">
+                <i class="material-icons">add</i>
+            </a>
+
+        </div>
+
+	</header>
+
+	<div class="main__wrap wrap">
+		<div class="main">
+			<h1 class="main__title">Стань профессиональным охотником и находи в 7 раз больше добычи</h1>
+			<p class="main__subtitle">Фотоловушки Филин помогут стать лучшим среди друзей</p>
+			<div class="main__form form">
+				<p class="form__name">Оставьте заявку</p>
+				<p class="form__desc line line--accent">И наш специалист по фотолувушкам бесплатно поможет вам в выборе</p>
+
+				<form action="/send_new.php" method="post">
+                    <div class="form__input" data-target='form-head-name'>
+                        <i class="material-icons">person</i>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="form-head-name">
+                            <label class="mdl-textfield__label" for="form-head-name">Введите имя...</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form__input"  data-target='form-head-phone'>
+                        <i class="material-icons">phone</i>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-head-phone">
+                            <label class="mdl-textfield__label" for="form-head-phone">Введите имя...</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </div>
+
+					<input type="hidden" name='variant' value="first" >
+					<input type="hidden" name="type" value="header">
+					<input type="hidden" name='landing' value="Фотоловушки Осн." >
+					<input type="hidden" name='category_title' value="Консультация">
+					<input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
+					<input type="hidden" name='product_title' class="product_title" value="">
+
+					<button class="btn btn--accent form__btn pulse">Оставить заявку</button>
+
+				</form>
+				
+			</div>
+		</div>
+	</div>
+
+</section>
+
+
+<!-- ЧТО ТАКОЕ ФОТОЛОВУШКА -->
+
+
+<section class="desc__wrap wrap" id="desc">
+    <h2 class="dsc__title">ЧТО ТАКОЕ <span>ФОТОЛОВУШКА</span></h2>
+
+    <div class="desc">
+        <div class="desc__img">
+            <img src="img/desc.jpg" alt="Фотоловушка">
+        </div>
+        <div class="desc__content">
+            <p class="desc__text">
+                <b>Фотоловушки</b> - это высокотехнологичное современное оборудование, предназначенное для наблюдения за определённой зоной и автоматического фото и видео фиксирования всего происходящего. С помощью тонких настроек камеры, можно четко отрегулировать фотоловушку под любые нужды: для охоты, охраны дома, охраны рабочего помещения или пасеки. Также вы сможете использовать данный гаджет для любительского наблюдения/ съёмки животных. Фотоловушка делает высококачественные снимки (до 16 Mpix) и записывает видеоролики (в том числе и ночью, благодаря встроенной ИК-подсветке в невидимом спектре), сохраняя всё на SD-карту. А с помощью функции ММС и 3G фотоловушка мгновенно отправляет снятое на телефон или e-mail. Влагозащищенный корпус и камуфлированная окраска позволяют вешать камеру даже в лесу и оставлять там на длительное время.
+            </p>
+            <div class="desc__action">
+                <div class="desc__utp">
+                    <img src="img/svg/pdf.svg" width="43" height="56" alt="pdf">
+                    <p>Скачайте <b>бесплатно 5 важных советов</b> по использованию фотоловушки</p>
+                    <i class="material-icons">arrow_forward</i>
+                </div>
+                <a data-fancybox data-src="#hidden-form__download" data-product="Загрузка PDF" data-pprice="0" href="javascript:;" class="btn btn--accent desc__btn pulse">Скачать бесплатно</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- СФЕРЫ ПРИМЕНЕНИЯ ФОТОЛОВУШЕК -->
+
+
+<section class="prim__wrap wrap" id="prim">
+    <h2 class="prim__title">СФЕРЫ ПРИМЕНЕНИЯ <span>ФОТОЛОВУШЕК</span></h2>
+
+    <div class="prim">
+        <div class="prim__item prim__item--1">
+            <p class="prim__name line line--accent">БЕЗОПАСНОСТЬ</p>
+            <p class="prim__text">Автономное видеонаблюдение для дачи, загородного дома, участка или стройки.</p>
+        </div>
+        <div class="prim__item prim__item--2">
+            <p class="prim__name line line--accent">ОХОТА</p>
+            <p class="prim__text">Экономия вашего времени на отслеживание перемещений животных и хищников.</p>
+        </div>
+        <div class="prim__item prim__item--3">
+            <p class="prim__name line line--accent">ИССЛЕДОВАНИЯ</p>
+            <p class="prim__text">Наблюдение за животными в их естественной среде. Контроль популяции и миграции.</p>
+        </div>
+        <div class="prim__item prim__item--4">
+            <p class="prim__name line line--accent">ЭКОЛОГИЯ</p>
+            <p class="prim__text">Контроль над браконьерами в природных заповедниках и заказниках.</p>
+        </div>
+    </div>
+
+    <a data-fancybox data-src="#hidden-form__default" data-product="Заказ" data-pprice="0" href="javascript:;" class="btn btn--accent prim__btn pulse">Мне подходит</a>
+
+</section>
+
+
+<!-- КАТАЛОГ ЛУЧШИХ МОДЕЛЕЙ -->
+
+
+<section class="cat__wrap wrap" id="cat">
+    <h2 class="cat__title">КАТАЛОГ ЛУЧШИХ МОДЕЛЕЙ</h2>
+
+    <div class="cat">
+
+
+<!-- Филин Mini -->
+
+
+        <div class="cat__item item-min">
+
+            <div class="item-min__img">
+                <p class="item-min__name">Филин Mini</p>
+                <div class="item-min__galery owl-carousel">
+                    <a href="img/items/item1_1@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                        <img src="img/items/item1_1.png" alt="Филин Mini">
+                    </a>
+                    <a href="img/items/item1_2@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                        <img src="img/items/item1_2.png" alt="Филин Mini">
+                    </a>
+                    <a href="img/items/item1_3@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                        <img src="img/items/item1_3.png" alt="Филин Mini">
+                    </a>
+                    <a href="img/items/item1_4@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                        <img src="img/items/item1_4.png" alt="Филин Mini">
+                    </a>
+                </div>
+                <div class="item-min__prices price-sm">
+                    <p class="price-sm__new">4 890 ₽</p>
+                    <span class="price-sm__old">6 950 ₽</span>
+                </div>
+            </div>
+
+            <div class="item-min__content">
+                <div class="item-min__head">
+                    <span id="title1" class="item-min__title">Характеристики</span>
+
+                    <div class="item-min__dotted">
+                        
+                        <button id="lower1" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                        </button>
+
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="lower1">
+                          <li data-parent="block-1" data-target="i-charter" data-title="title1"  class="mdl-menu__item item-min__list item-min__list--active">Характеристики</li>
+                          <li data-parent="block-1" data-target="i-desc" data-title="title1" class="mdl-menu__item item-min__list">Описание</li>
+                          <li data-parent="block-1" data-target="i-adv" data-title="title1" class="mdl-menu__item item-min__list">Преимущества</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="item-min__body">
+                    <div id="block-1" class="item-min__text"> 
+                        <div class="item-min__text-item i-charter item-min__text-item--active">
+                            <ul class="i-charter__list">
+                                <li><span class="i-charter__name">Угол обзора</span><span class="i-charter__text">90°</span></li>
+                                <li><span class="i-charter__name">Активный режим ожидания</span><span class="i-charter__text">3 мес</span></li>
+                                <li><span class="i-charter__name">Ночная съёмка</span><span class="i-charter__text">дальность 20 м</span></li>
+                                <li><span class="i-charter__name">ИК-фильтр</span><span class="i-charter__text">26 датчиков</span></li>
+                                <li><span class="i-charter__name">Разрешение видео</span><span class="i-charter__text">Full HD 1920×1080px</span></li>
+                                <li><span class="i-charter__name">Тип аккумулятора</span><span class="i-charter__text">батарейка AA (4 шт.)</span></li>
+                            </ul>
+                        </div>
+                        <div class="item-min__text-item i-desc">
+                            <p>
+                                Это автономная камера во влагозащищенном корпусе, реагирующая на движение и снимающая появившихся животных<br>Фотоловушка скрытно устанавливается в лесу в местах, где часто появляются животные или птицы. Она включается от ИК-датчика движения и делает снимки с заданной частотой. Фотоловушка Филин mini может работать автономно до трех месяцев, осуществляя запись на подключенную карту памяти емкостью до 32 Гб. Вам понравится ее кадры!
+                            </p>
+                        </div>
+                        <div class="item-min__text-item i-adv">
+                            <ul>
+                                <li>
+                                    <p class="i-adv__name"><span>1</span> КОМПАКТНЫЙ РАЗМЕР</p>
+                                    <p class="i-adv__text">Новый уменьшенный корпус Филин Mini и камуфляжная окраска позволяют скрыть фотоловушку так, чтобы ее не смогли обнаружить ни люди, ни животные.</p>
+                                </li>
+                                <li>
+                                    <p class="i-adv__name"><span>2</span> НИЗКОЕ ЭНЕРГОПОТРЕБЛЕНИЕ</p>
+                                    <p class="i-adv__text">Филин Mini питается от четырех батареек типа AA и в режиме ожидания потребляет всего 0,2 mAh, что позволяет ему работать автономно на протяжении 3 месяцев.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item-min__body -->
+
+                <div class="item-min__footer">
+                    <a data-fancybox data-src="#hidden-form__buy" data-product="Филин Mini" data-pprice="4890" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
+                    <a href="#mini" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#hidden-form__more" data-product="Филин Mini" data-pprice="4890" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- Филин 120 -->
+
+
+        <div class="cat__item item-min">
+
+            <div class="item-min__img">
+                <p class="item-min__name">Филин 120</p>
+                <div class="item-min__galery owl-carousel">
+                    <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                        <img src="img/items/item2_1.png" alt="Филин 120">
+                    </a>
+                    <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                        <img src="img/items/item2_2.png" alt="Филин 120">
+                    </a>
+                    <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                        <img src="img/items/item2_3.png" alt="Филин 120">
+                    </a>
+                    <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                        <img src="img/items/item2_4.png" alt="Филин 120">
+                    </a>
+                </div>
+                <div class="item-min__prices price-sm">
+                    <p class="price-sm__new">5 890 ₽</p>
+                    <span class="price-sm__old">7 890 ₽</span>
+                </div>
+            </div>
+
+            <div class="item-min__content">
+                <div class="item-min__head">
+                    <span id="title2" class="item-min__title">Характеристики</span>
+
+                    <div class="item-min__dotted">
+                        
+                        <button id="lower2" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                        </button>
+
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="lower2">
+                          <li data-parent="block-2" data-target="i-charter" data-title="title2"  class="mdl-menu__item item-min__list item-min__list--active">Характеристики</li>
+                          <li data-parent="block-2" data-target="i-desc" data-title="title2" class="mdl-menu__item item-min__list">Описание</li>
+                          <li data-parent="block-2" data-target="i-adv" data-title="title2" class="mdl-menu__item item-min__list">Преимущества</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="item-min__body">
+                    <div id="block-2" class="item-min__text"> 
+                        <div class="item-min__text-item i-charter item-min__text-item--active">
+                            <ul class="i-charter__list">
+                                <li><span class="i-charter__name">Угол обзора</span><span class="i-charter__text">120°</span></li>
+                                <li><span class="i-charter__name">Разрешение фото</span><span class="i-charter__text">4032×3024 px</span></li>
+                                <li><span class="i-charter__name">Дисплей</span><span class="i-charter__text">2.5 ”</span></li>
+                                <li><span class="i-charter__name">Время срабатывания</span><span class="i-charter__text">0,7 сек.</span></li>
+                                <li><span class="i-charter__name">Внешняя память</span><span class="i-charter__text">SD/SDHC до 32 Гб</span></li>
+                                <li><span class="i-charter__name">Влагозащита</span><span class="i-charter__text">IP 65</span></li>
+                            </ul>
+                        </div>
+                        <div class="item-min__text-item i-desc">
+                            <p>
+                                Фотоловушка Филин 120 работает в автоматическом режиме, записывая качественное видео в формате Full HD и снимая фото с разрешением до 4032х3024 px и днём, и ночью. Благодаря встроенным ИК-датчикам и мгновенно срабатывающему датчику движения данная фотоловушка не пропустит ни одно животное и произведёт быстрый захват объекта при любом освещении!
+                            </p>
+                        </div>
+                        <div class="item-min__text-item i-adv">
+                            <ul>
+                                <li>
+                                    <p class="i-adv__name"><span>1</span> Скорость срабатывания</p>
+                                    <p class="i-adv__text">Время реагирования камеры составляет всего 0.7 секунды! Ни одно существо не останется незамеченным и Вы получите фотопортреты всех обитателей этих мест!.</p>
+                                </li>
+                                <li>
+                                    <p class="i-adv__name"><span>2</span> Угол обзора и чувствительность</p>
+                                    <p class="i-adv__text">Широкоугольный объектив фотоловушки Филин 120° имеет расширенную зону видимости и даже ночью способен зафиксировать объект на расстоянии до 25 метров!</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item-min__body -->
+
+                <div class="item-min__footer">
+                    <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 120" data-pprice="5890" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
+                    <a href="#120" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#hidden-form__more" data-product="Филин 120" data-pprice="5890" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- Филин 120 MMS -->
+
+
+        <div class="cat__item item-min">
+
+            <div class="item-min__img">
+                <p class="item-min__name">Филин 120 MMS</p>
+                <div class="item-min__galery owl-carousel">
+                    <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                        <img src="img/items/item2_2.png" alt="Филин 120 MMS">
+                    </a>
+                    <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                        <img src="img/items/item2_3.png" alt="Филин 120 MMS">
+                    </a>
+                    <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                        <img src="img/items/item2_4.png" alt="Филин 120 MMS">
+                    </a>
+                    <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                        <img src="img/items/item2_1.png" alt="Филин 120 MMS">
+                    </a>
+                </div>
+                <div class="item-min__prices price-sm">
+                    <p class="price-sm__new">7 490 ₽</p>
+                    <span class="price-sm__old">11 390 ₽</span>
+                </div>
+            </div>
+
+            <div class="item-min__content">
+                <div class="item-min__head">
+                    <span id="title3" class="item-min__title">Характеристики</span>
+
+                    <div class="item-min__dotted">
+                        
+                        <button id="lower3" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                        </button>
+
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="lower3">
+                          <li data-parent="block-3" data-target="i-charter" data-title="title3"  class="mdl-menu__item item-min__list item-min__list--active">Характеристики</li>
+                          <li data-parent="block-3" data-target="i-desc" data-title="title3" class="mdl-menu__item item-min__list">Описание</li>
+                          <li data-parent="block-3" data-target="i-adv" data-title="title3" class="mdl-menu__item item-min__list">Преимущества</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="item-min__body">
+                    <div id="block-3" class="item-min__text"> 
+                        <div class="item-min__text-item i-charter item-min__text-item--active">
+                            <ul class="i-charter__list">
+                                <li><span class="i-charter__name">Матрица</span><span class="i-charter__text">CMOS 16 Mpx</span></li>
+                                <li><span class="i-charter__name">Дисплей</span><span class="i-charter__text">2,5 ”</span></li>
+                                <li><span class="i-charter__name">Разрешение фото</span><span class="i-charter__text">4032×3024 px</span></li>
+                                <li><span class="i-charter__name">Разрешение видео</span><span class="i-charter__text">Full HD 1920×1080 px</span></li>
+                                <li><span class="i-charter__name">Фокусное расстояние</span><span class="i-charter__text">3,14</span></li>
+                                <li><span class="i-charter__name">Внешняя память</span><span class="i-charter__text">micro-SD до 32 Гб</span></li>
+                            </ul>
+                        </div>
+                        <div class="item-min__text-item i-desc">
+                            <p>
+                                Фотоловушка Филин 120 MMS — это устройство размером 9×14×6 см с 2.5 ЖК-дисплеем и глазком объектива камеры. Она выполнена в водостойком корпусе и предназначена для скрытной установки и всепогодной съемки диких животных в их естественной среде обитания. Период автономной работы от 1 комплекта батареек 3 месяца.
+                            </p>
+                        </div>
+                        <div class="item-min__text-item i-adv">
+                            <ul>
+                                <li>
+                                    <p class="i-adv__name"><span>1</span> Автономность</p>
+                                    <p class="i-adv__text">Фотоловушка будет фиксировать все, происходящее поблизости на протяжении 3 месяцев. В любую погоду. В любое время суток. Эту камеру не нужно постоянно подзаряжать!</p>
+                                </li>
+                                <li>
+                                    <p class="i-adv__name"><span>2</span> Качество съемки</p>
+                                    <p class="i-adv__text">Филин 120 MMS сделает и пришлет Вам большие четкие фотографии. Или снимет короткие видео-ролики в формате Full HD. Его руки не дрожат, и терпение не иссякает!</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item-min__body -->
+
+                <div class="item-min__footer">
+                    <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 120 MMS" data-pprice="7490" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
+                    <a href="#120mms" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#hidden-form__more" data-product="Филин 120 MMS" data-pprice="7490" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- Филин 120 MMS/3G -->
+
+
+        <div class="cat__item item-min">
+
+            <div class="item-min__img">
+                <p class="item-min__name">Филин 120 MMS/3G</p>
+                <div class="item-min__galery owl-carousel">
+                    <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
+                        <img src="img/items/item2_3.png" alt="Филин 120 MMS/3G">
+                    </a>
+                    <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
+                        <img src="img/items/item2_4.png" alt="Филин 120 MMS/3G">
+                    </a>
+                    <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
+                        <img src="img/items/item2_1.png" alt="Филин 120 MMS/3G">
+                    </a>
+                    <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
+                        <img src="img/items/item2_2.png" alt="Филин 120 MMS/3G">
+                    </a>
+                </div>
+                <div class="item-min__prices price-sm">
+                    <p class="price-sm__new">9 490 ₽</p>
+                    <span class="price-sm__old">12 990 ₽</span>
+                </div>
+            </div>
+
+            <div class="item-min__content">
+                <div class="item-min__head">
+                    <span id="title4" class="item-min__title">Характеристики</span>
+
+                    <div class="item-min__dotted">
+                        
+                        <button id="lower4" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                        </button>
+
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="lower4">
+                          <li data-parent="block-4" data-target="i-charter" data-title="title4"  class="mdl-menu__item item-min__list item-min__list--active">Характеристики</li>
+                          <li data-parent="block-4" data-target="i-desc" data-title="title4" class="mdl-menu__item item-min__list">Описание</li>
+                          <li data-parent="block-4" data-target="i-adv" data-title="title4" class="mdl-menu__item item-min__list">Преимущества</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="item-min__body">
+                    <div id="block-4" class="item-min__text"> 
+                        <div class="item-min__text-item i-charter item-min__text-item--active">
+                            <ul class="i-charter__list">
+                                <li><span class="i-charter__name">Угол обзора</span><span class="i-charter__text">120°</span></li>
+                                <li><span class="i-charter__name">Разрешение фото</span><span class="i-charter__text">4032×3024 px</span></li>
+                                <li><span class="i-charter__name">Разрешение видео</span><span class="i-charter__text">Full HD 1920×1080 px</span></li>
+                                <li><span class="i-charter__name">Поддержка стандарта 3G</span><span class="i-charter__text">есть</span></li>
+                                <li><span class="i-charter__name">Наложение даты и времени</span><span class="i-charter__text">есть</span></li>
+                                <li><span class="i-charter__name">Матрица</span><span class="i-charter__text">CMOS 16 Mpx</span></li>
+                            </ul>
+                        </div>
+                        <div class="item-min__text-item i-desc">
+                            <p>
+                                Фотоловушка Филин 120 MMS/3G осуществляет фото и видео съемку находящихся поблизости подвижных объектов с разрешением 4032х3024px и Full HD видео 1920х1080px. Полученные фотоснимки отправляются прямо на Ваш телефон или компьютер по MMS и email. Благодаря поддержке сетей 3G, передача данных происходит быстро и без сбоев.
+                            </p>
+                        </div>
+                        <div class="item-min__text-item i-adv">
+                            <ul>
+                                <li>
+                                    <p class="i-adv__name"><span>1</span> Камера срабатывает за 0.7 секунды</p>
+                                    <p class="i-adv__text">36 ИК-датчиков движения включают камеру всего за 0.7 секунды. Это позволяет зафиксировать даже быстро бегущее животное или человека.</p>
+                                </li>
+                                <li>
+                                    <p class="i-adv__name"><span>2</span> Угол обзора объектива 120 градусов</p>
+                                    <p class="i-adv__text">Угол обзора объектива составляет 120 градусов. Фокусное расстояние 3,14. Ночная съемка до 25 метров. Матрица 16 мегапикселей. Профессиональное оборудование.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item-min__body -->
+
+                <div class="item-min__footer">
+                    <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 120 MMS/3G" data-pprice="9490" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
+                    <a href="#120mms3g" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#hidden-form__more" data-product="Филин 120 MMS/3G" data-pprice="9490" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- Филин 120 SM 4G -->
+
+
+        <div class="cat__item item-min">
+
+            <div class="item-min__img">
+                <p class="item-min__name">Филин 120 SM 4G</p>
+                <div class="item-min__galery owl-carousel">
+                    <a href="img/items/item5_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
+                        <img src="img/items/item5_1.png" alt="Филин 120 SM 4G">
+                    </a>
+                    <a href="img/items/item5_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
+                        <img src="img/items/item5_2.png" alt="Филин 120 SM 4G">
+                    </a>
+                    <a href="img/items/item5_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
+                        <img src="img/items/item5_3.png" alt="Филин 120 SM 4G">
+                    </a>
+                    <a href="img/items/item5_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
+                        <img src="img/items/item5_4.png" alt="Филин 120 SM 4G">
+                    </a>
+                </div>
+                <div class="item-min__prices price-sm">
+                    <p class="price-sm__new">19 990 ₽</p>
+                    <span class="price-sm__old">27 580 ₽</span>
+                </div>
+            </div>
+
+            <div class="item-min__content">
+                <div class="item-min__head">
+                    <span id="title5" class="item-min__title">Характеристики</span>
+
+                    <div class="item-min__dotted">
+                        
+                        <button id="lower5" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                        </button>
+
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="lower5">
+                          <li data-parent="block-5" data-target="i-charter" data-title="title5"  class="mdl-menu__item item-min__list item-min__list--active">Характеристики</li>
+                          <li data-parent="block-5" data-target="i-desc" data-title="title5" class="mdl-menu__item item-min__list">Описание</li>
+                          <li data-parent="block-5" data-target="i-adv" data-title="title5" class="mdl-menu__item item-min__list">Преимущества</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="item-min__body">
+                    <div id="block-5" class="item-min__text"> 
+                        <div class="item-min__text-item i-charter item-min__text-item--active">
+                            <ul class="i-charter__list">
+                                <li><span class="i-charter__name">Угол обзора</span><span class="i-charter__text">120°</span></li>
+                                <li><span class="i-charter__name">Дисплей</span><span class="i-charter__text">2,0 ”</span></li>
+                                <li><span class="i-charter__name">Время срабатывания</span><span class="i-charter__text">0,6 сек.</span></li>
+                                <li><span class="i-charter__name">Матрица</span><span class="i-charter__text">CMOS 12 Mpx</span></li>
+                                <li><span class="i-charter__name">Разрешение фото</span><span class="i-charter__text">4032×3024 px</span></li>
+                                <li><span class="i-charter__name">Разрешение видео</span><span class="i-charter__text">Full HD 1920×1080 px</span></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="item-min__text-item i-desc">
+                            <p>
+                                Фотоловушка Филин 120 SM 4G — это устройство нового поколения с поддержкой сетей 4G LTE и двусторонней связью, позволяющей получать в реальном времени и фотоснимки, и видеоклипы. Усиленная антенна и пониженное энергопотребление 35 миллиампера в режиме ожидания, обеспечивают ей возможность автономной работы до 4 месяцев!
+                            </p>
+                        </div>
+                        <div class="item-min__text-item i-adv">
+                            <ul>
+                                <li>
+                                    <p class="i-adv__name"><span>1</span> Скоростная камера</p>
+                                    <p class="i-adv__text">12-мегапиксельная камера активируется 54-мя ИК датчиками движения всего за 0.6 секунды, при любом освещении фиксируя даже быстро движущиеся объекты.</p>
+                                </li>
+                                <li>
+                                    <p class="i-adv__name"><span>2</span> Поддержка 4G LTE</p>
+                                    <p class="i-adv__text">Теперь Вы можете получать на емэйл в режиме реального времени не только фотографии, но и видеоролики, отснятые Вашим фотоохотником!</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item-min__body -->
+
+                <div class="item-min__footer">
+                    <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 120 SM 4G" data-pprice="19990" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
+                    <a href="#120sm4g" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#hidden-form__more" data-product="Филин 120 SM 4G" data-pprice="19990" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- Филин PRO EDITION -->
+
+
+        <div class="cat__item item-min">
+
+            <div class="item-min__img">
+                <p class="item-min__name">Филин PRO EDITION</p>
+                <div class="item-min__galery owl-carousel">
+                    <a href="img/items/item3_1@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
+                        <img src="img/items/item3_1.png" alt="Филин PRO EDITION">
+                    </a>
+                    <a href="img/items/item3_2@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
+                        <img src="img/items/item3_2.png" alt="Филин PRO EDITION">
+                    </a>
+                    <a href="img/items/item3_3@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
+                        <img src="img/items/item3_3.png" alt="Филин PRO EDITION">
+                    </a>
+                    <a href="img/items/item3_4@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
+                        <img src="img/items/item3_4.png" alt="Филин PRO EDITION">
+                    </a>
+                </div>
+                <div class="item-min__prices price-sm">
+                    <p class="price-sm__new">10 490 ₽</p>
+                    <span class="price-sm__old">14 990 ₽</span>
+                </div>
+            </div>
+
+            <div class="item-min__content">
+                <div class="item-min__head">
+                    <span id="title6" class="item-min__title">Характеристики</span>
+
+                    <div class="item-min__dotted">
+                        
+                        <button id="lower6" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                        </button>
+
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="lower6">
+                          <li data-parent="block-6" data-target="i-charter" data-title="title6"  class="mdl-menu__item item-min__list item-min__list--active">Характеристики</li>
+                          <li data-parent="block-6" data-target="i-desc" data-title="title6" class="mdl-menu__item item-min__list">Описание</li>
+                          <li data-parent="block-6" data-target="i-adv" data-title="title6" class="mdl-menu__item item-min__list">Преимущества</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="item-min__body">
+                    <div id="block-6" class="item-min__text"> 
+                        <div class="item-min__text-item i-charter item-min__text-item--active">
+                            <ul class="i-charter__list">
+                                <li><span class="i-charter__name">Время срабатывания</span><span class="i-charter__text">0,7 сек.</span></li>
+                                <li><span class="i-charter__name">Разрешение фото</span><span class="i-charter__text">4032×3024 px</span></li>
+                                <li><span class="i-charter__name">Разрешение видео</span><span class="i-charter__text">Full HD 1920×1080 px</span></li>
+                                <li><span class="i-charter__name">Отправка уведомлений</span><span class="i-charter__text">MMS и e-mail</span></li>
+                                <li><span class="i-charter__name">Внешняя память</span><span class="i-charter__text">micro-SD до 32 Гб</span></li>
+                                <li><span class="i-charter__name">Матрица</span><span class="i-charter__text">CMOS 16 Mpx</span></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="item-min__text-item i-desc">
+                            <p>
+                                Камера фотоловушки осуществляет фотосъемку с разрешением до 4920×3264 px и видеосъемку в формате Full HD 1920×1080px в любое время суток и в любую погоду.
+                            </p>
+                        </div>
+                        <div class="item-min__text-item i-adv">
+                            <ul>
+                                <li>
+                                    <p class="i-adv__name"><span>1</span> Большая матрица</p>
+                                    <p class="i-adv__text">12-мегапиксельная камера активируется 54-мя ИК датчиками движения всего за 0.6 секунды, при любом освещении фиксируя даже быстро движущиеся объекты.</p>
+                                </li>
+                                <li>
+                                    <p class="i-adv__name"><span>2</span> Широкоугольный объектив</p>
+                                    <p class="i-adv__text">Фотоловушка оборудована широкоугольным объективом с углом захвата в 120 градусов. В темное время суток возможна съемка объектов на расстоянии до 25 метров.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item-min__body -->
+
+                <div class="item-min__footer">
+                    <a data-fancybox data-src="#hidden-form__buy" data-product="Филин PRO EDITION" data-pprice="10490" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
+                    <a href="#proedition" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#hidden-form__more" data-product="Филин PRO EDITION" data-pprice="10490" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- Филин 200 -->
+
+
+        <div class="cat__item item-min">
+
+            <div class="item-min__img">
+                <p class="item-min__name">Филин 200</p>
+                <div class="item-min__galery owl-carousel">
+                    <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200">
+                        <img src="img/items/item4_1.png" alt="Филин 200">
+                    </a>
+                    <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200">
+                        <img src="img/items/item4_2.png" alt="Филин 200">
+                    </a>
+                    <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200">
+                        <img src="img/items/item4_3.png" alt="Филин 200">
+                    </a>
+                    <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200">
+                        <img src="img/items/item4_4.png" alt="Филин 200">
+                    </a>
+                </div>
+                <div class="item-min__prices price-sm">
+                    <p class="price-sm__new">8 490 ₽</p>
+                    <span class="price-sm__old">11 200 ₽</span>
+                </div>
+            </div>
+
+            <div class="item-min__content">
+                <div class="item-min__head">
+                    <span id="title7" class="item-min__title">Характеристики</span>
+
+                    <div class="item-min__dotted">
+                        
+                        <button id="lower7" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                        </button>
+
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="lower7">
+                          <li data-parent="block-7" data-target="i-charter" data-title="title7"  class="mdl-menu__item item-min__list item-min__list--active">Характеристики</li>
+                          <li data-parent="block-7" data-target="i-desc" data-title="title7" class="mdl-menu__item item-min__list">Описание</li>
+                          <li data-parent="block-7" data-target="i-adv" data-title="title7" class="mdl-menu__item item-min__list">Преимущества</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="item-min__body">
+                    <div id="block-7" class="item-min__text"> 
+                        <div class="item-min__text-item i-charter item-min__text-item--active">
+                            <ul class="i-charter__list">
+                                <li><span class="i-charter__name">Линза</span><span class="i-charter__text">F=3.14</span></li>
+                                <li><span class="i-charter__name">Датчика движения</span><span class="i-charter__text">3 шт.</span></li>
+                                <li><span class="i-charter__name">Ночная съёмка</span><span class="i-charter__text">дальность 20м.</span></li>
+                                <li><span class="i-charter__name">Питание</span><span class="i-charter__text">8 батареек AA</span></li>
+                                <li><span class="i-charter__name">Внешняя память</span><span class="i-charter__text">micro-SD до 32 Гб</span></li>
+                                <li><span class="i-charter__name">Разрешение видео</span><span class="i-charter__text">FullHD 1920x1080</span></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="item-min__text-item i-desc">
+                            <p>
+                                Лимитованная линейка фотоловушек "Филин 200" 2018 года, в отличии от моделей "Филин 120" имеет более качественную матрицу, что увеличивает качество съемки фото и видео, время срабатывания 0,3 секунд (вместо 0,7 секунд). Время автономной работы увеличено до 6 месяцев, благодаря улучшенному и экономному энергопотреблению. Влагозащищенный корпус IP65 обеспечивает стойкость микросхем. А дальность ночной съемки увеличилась до 30 метров
+                            </p>
+                        </div>
+                        <div class="item-min__text-item i-adv">
+                            <ul>
+                                <li>
+                                    <p class="i-adv__name"><span>1</span> Большая матрица</p>
+                                    <p class="i-adv__text">Разрешение для фотосъёмки от 5 до 16 мегапикселей, видео FULL HD 1080 p.</p>
+                                </li>
+                                <li>
+                                    <p class="i-adv__name"><span>2</span> Ночная съемка</p>
+                                    <p class="i-adv__text">Ночью включаются 36 инфракрасных светодиодов, мощности которых хватает для обзора 120 градусов и до 15 метров.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item-min__body -->
+
+                <div class="item-min__footer">
+                    <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 200" data-pprice="8490" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
+                    <a href="#200" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#hidden-form__more" data-product="Филин 200" data-pprice="8490" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- Филин 200 MMS -->
+
+
+        <div class="cat__item item-min">
+
+            <div class="item-min__img">
+                <p class="item-min__name">Филин 200 MMS</p>
+                <div class="item-min__galery owl-carousel">
+                    <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                        <img src="img/items/item4_2.png" alt="Филин 200 MMS">
+                    </a>
+                    <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                        <img src="img/items/item4_3.png" alt="Филин 200 MMS">
+                    </a>
+                    <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                        <img src="img/items/item4_4.png" alt="Филин 200 MMS">
+                    </a>
+                    <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                        <img src="img/items/item4_1.png" alt="Филин 200 MMS">
+                    </a>
+                </div>
+                <div class="item-min__prices price-sm">
+                    <p class="price-sm__new">9 690 ₽</p>
+                    <span class="price-sm__old">13 680 ₽</span>
+                </div>
+            </div>
+
+            <div class="item-min__content">
+                <div class="item-min__head">
+                    <span id="title8" class="item-min__title">Характеристики</span>
+
+                    <div class="item-min__dotted">
+                        
+                        <button id="lower8" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                        </button>
+
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="lower8">
+                          <li data-parent="block-8" data-target="i-charter" data-title="title8"  class="mdl-menu__item item-min__list item-min__list--active">Характеристики</li>
+                          <li data-parent="block-8" data-target="i-desc" data-title="title8" class="mdl-menu__item item-min__list">Описание</li>
+                          <li data-parent="block-8" data-target="i-adv" data-title="title8" class="mdl-menu__item item-min__list">Преимущества</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="item-min__body">
+                    <div id="block-8" class="item-min__text"> 
+                        <div class="item-min__text-item i-charter item-min__text-item--active">
+                            <ul class="i-charter__list">
+                                <li><span class="i-charter__name">Разрешение фото</span><span class="i-charter__text">16MP</span></li>
+                                <li><span class="i-charter__name">Подсветка</span><span class="i-charter__text">20 метров</span></li>
+                                <li><span class="i-charter__name">Угол обзора</span><span class="i-charter__text">120°</span></li>
+                                <li><span class="i-charter__name">В режиме ожидания</span><span class="i-charter__text">6 месяцев</span></li>
+                                <li><span class="i-charter__name">Отправка на E-Mail и Телефон</span><span class="i-charter__text">Есть</span></li>
+                                <li><span class="i-charter__name">Удаленное управление</span><span class="i-charter__text">Есть</span></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="item-min__text-item i-desc">
+                            <p>
+                                Цифровая фотоловушка с ИК подсветкой "Филин 200 ММS" создана для ведения съёмки животных в их среде обитания, а также с целью охраны. Мобильная связь позволяет получать мгновенные отчёты об успешных съёмках при помощи MMS и вести удалённое управление камерой при помощи команд по SMS. Благодаря защите от влаги и пыли IP65 и низкому энергопотреблению, "Филин 200 ММS" способна автономно работать в условиях дикой природы до 6 месяцев. Вы можете закрепить камеру на дереве с идущим в комплекте ремешком и заранее задать интервалы для съёмки.
+                            </p>
+                        </div>
+                        <div class="item-min__text-item i-adv">
+                            <ul>
+                                <li>
+                                    <p class="i-adv__name"><span>1</span> Скорость работы</p>
+                                    <p class="i-adv__text">Передаст фото в течение 1 минуты на Ваш телефон или почту. Технология передачи работает лучше и быстрее.</p>
+                                </li>
+                                <li>
+                                    <p class="i-adv__name"><span>2</span> Удаленное управление</p>
+                                    <p class="i-adv__text">Позволяет вам управлять фотоловушкой с расстояния, отправляя команды с телефона по СМС.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item-min__body -->
+
+                <div class="item-min__footer">
+                    <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 200 MMS" data-pprice="9690" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
+                    <a href="#200mms" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#hidden-form__more" data-product="Филин 200 MMS" data-pprice="9690" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- Филин 200 MMS/3G -->
+
+
+        <div class="cat__item item-min">
+
+            <div class="item-min__img">
+                <p class="item-min__name">Филин 200 MMS/3G</p>
+                <div class="item-min__galery owl-carousel">
+                    <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
+                        <img src="img/items/item4_3.png" alt="Филин 200 MMS/3G">
+                    </a>
+                    <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
+                        <img src="img/items/item4_4.png" alt="Филин 200 MMS/3G">
+                    </a>
+                    <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
+                        <img src="img/items/item4_1.png" alt="Филин 200 MMS/3G">
+                    </a>
+                    <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
+                        <img src="img/items/item4_2.png" alt="Филин 200 MMS/3G">
+                    </a>
+                </div>
+                <div class="item-min__prices price-sm">
+                    <p class="price-sm__new">12 590 ₽</p>
+                    <span class="price-sm__old">15 180 ₽</span>
+                </div>
+            </div>
+
+            <div class="item-min__content">
+                <div class="item-min__head">
+                    <span id="title9" class="item-min__title">Характеристики</span>
+
+                    <div class="item-min__dotted">
+                        
+                        <button id="lower9" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                        </button>
+
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="lower9">
+                          <li data-parent="block-9" data-target="i-charter" data-title="title9"  class="mdl-menu__item item-min__list item-min__list--active">Характеристики</li>
+                          <li data-parent="block-9" data-target="i-desc" data-title="title9" class="mdl-menu__item item-min__list">Описание</li>
+                          <li data-parent="block-9" data-target="i-adv" data-title="title9" class="mdl-menu__item item-min__list">Преимущества</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="item-min__body">
+                    <div id="block-9" class="item-min__text"> 
+                        <div class="item-min__text-item i-charter item-min__text-item--active">
+                            <ul class="i-charter__list">
+                                <li><span class="i-charter__name">Поддержка стандарта 3G</span><span class="i-charter__text">Есть</span></li>
+                                <li><span class="i-charter__name">Удаленное управление</span><span class="i-charter__text">Есть</span></li>
+                                <li><span class="i-charter__name">Разрешение фото</span><span class="i-charter__text">16MP</span></li>
+                                <li><span class="i-charter__name">Подсветка</span><span class="i-charter__text">20 метров</span></li>
+                                <li><span class="i-charter__name">Угол обзора</span><span class="i-charter__text">120°</span></li>
+                                <li><span class="i-charter__name">В режиме ожидания</span><span class="i-charter__text">6 месяцев</span></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="item-min__text-item i-desc">
+                            <p>
+                                Фотоловушка "Филин 200 MMS/3G" - вариант "лесной" камеры, работающей по датчику движения с функцией ММС и 3G. Именно возможность отправлять фотографии не только на телефон, но и на электронную почту отличает её от младшей модели "Филин 200 MMS". Качество видео (1080P/720P) и фото (4032х3024) находятся на чень высоком уровне, а матрица выдаёт отличную картинку даже в тёмное время суток/при непогоде/плохом освещении.
+                            </p>
+                        </div>
+                        <div class="item-min__text-item i-adv">
+                            <ul>
+                                <li>
+                                    <p class="i-adv__name"><span>1</span> Автоматическая отправка сообщений</p>
+                                    <p class="i-adv__text">Автоматически отправляет фото и видео файлы на любое устройство, соединенное с интернетом.</p>
+                                </li>
+                                <li>
+                                    <p class="i-adv__name"><span>2</span> Высокая скорость реагирования</p>
+                                    <p class="i-adv__text">Фотоловушка обладает высокой скоростью реагирования на движение. Время срабатывания составляет всего 0,3 секунды.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item-min__body -->
+
+                <div class="item-min__footer">
+                    <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 200 MMS/3G" data-pprice="12590" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
+                    <a href="#200mms3g" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#hidden-form__more" data-product="Филин 200 MMS/3G" data-pprice="12590" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- Филин 200 4G -->
+
+
+        <div class="cat__item item-min">
+
+            <div class="item-min__img">
+                <p class="item-min__name">Филин 200 4G</p>
+                <div class="item-min__galery owl-carousel">
+                    <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
+                        <img src="img/items/item4_4.png" alt="Филин 200 4G">
+                    </a>
+                    <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
+                        <img src="img/items/item4_1.png" alt="Филин 200 4G">
+                    </a>
+                    <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
+                        <img src="img/items/item4_2.png" alt="Филин 200 4G">
+                    </a>
+                    <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
+                        <img src="img/items/item4_3.png" alt="Филин 200 4G">
+                    </a>
+                </div>
+                <div class="item-min__prices price-sm">
+                    <p class="price-sm__new">16 490 ₽</p>
+                    <span class="price-sm__old">26 230 ₽</span>
+                </div>
+            </div>
+
+            <div class="item-min__content">
+                <div class="item-min__head">
+                    <span id="title10" class="item-min__title">Характеристики</span>
+
+                    <div class="item-min__dotted">
+                        
+                        <button id="lower10" class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                        </button>
+
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="lower10">
+                          <li data-parent="block-10" data-target="i-charter" data-title="title10"  class="mdl-menu__item item-min__list item-min__list--active">Характеристики</li>
+                          <li data-parent="block-10" data-target="i-desc" data-title="title10" class="mdl-menu__item item-min__list">Описание</li>
+                          <li data-parent="block-10" data-target="i-adv" data-title="title10" class="mdl-menu__item item-min__list">Преимущества</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="item-min__body">
+                    <div id="block-10" class="item-min__text"> 
+                        <div class="item-min__text-item i-charter item-min__text-item--active">
+                            <ul class="i-charter__list">
+                                <li><span class="i-charter__name">Поддержка стандарта 4G</span><span class="i-charter__text">Есть</span></li>
+                                <li><span class="i-charter__name">Удаленное управление</span><span class="i-charter__text">Есть</span></li>
+                                <li><span class="i-charter__name">Дисплей</span><span class="i-charter__text">2.0'</span></li>
+                                <li><span class="i-charter__name">Ночная съемка</span><span class="i-charter__text">20 метров</span></li>
+                                <li><span class="i-charter__name">Угол обзора</span><span class="i-charter__text">120°</span></li>
+                                <li><span class="i-charter__name">В режиме ожидания</span><span class="i-charter__text">6 месяцев</span></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="item-min__text-item i-desc">
+                            <p>
+                                Фотоловушка "Филин 200 MMS/3G" - вариант "лесной" камеры, работающей по датчику движения с функцией ММС и 3G. Именно возможность отправлять фотографии не только на телефон, но и на электронную почту отличает её от младшей модели "Филин 200 MMS". Качество видео (1080P/720P) и фото (4032х3024) находятся на чень высоком уровне, а матрица выдаёт отличную картинку даже в тёмное время суток/при непогоде/плохом освещении.
+                            </p>
+                        </div>
+                        <div class="item-min__text-item i-adv">
+                            <ul>
+                                <li>
+                                    <p class="i-adv__name"><span>1</span> Скорость отправки</p>
+                                    <p class="i-adv__text">Отправляет данные в 100 раз быстрее, благодаря высокоскоростному 4G соединению</p>
+                                </li>
+                                <li>
+                                    <p class="i-adv__name"><span>2</span> Автоматическая отправка сообщений</p>
+                                    <p class="i-adv__text">Автоматически отправляет фото и видео файлы на любое устройство, соединенное с интернетом.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- item-min__body -->
+
+                <div class="item-min__footer">
+                    <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 200 4G" data-pprice="16490" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
+                    <a href="#2004g" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#hidden-form__more" data-product="Филин 200 4G" data-pprice="16490" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<!-- Полное описание товаров -->
+
+<!-- Филин Мини -->
+
+
+<section id="mini" class="item wrap">
+    
+    <div class="item__img">
+        <h2 class="item__name">Филин <span>Mini</span></h2>
+
+        <div class="item__galery owl-carousel">
+            <div class="">
+                <a href="img/items/item1_1@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                    <img src="img/items/item1_1.png" alt="Филин Mini">
+                </a>
+            </div>
+            <div>
+                <a href="img/items/item1_2@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                    <img src="img/items/item1_2.png" alt="Филин Mini">
+                </a>    
+            </div>
+            <div>
+                <a href="img/items/item1_3@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                    <img src="img/items/item1_3.png" alt="Филин Mini">
+                </a>    
+            </div>
+            <div>
+                <a href="img/items/item1_4@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                    <img src="img/items/item1_4.png" alt="Филин Mini">
+                </a>
+            </div>
+        </div>
+
+        <div class="item__prices price-big">
+            <div class="price-big__new">
+                <span class="price-big__desc">Цена сегодня</span>
+                <span class="price-big__numb">4 890 ₽</span>
+            </div>
+            <div class="price-big__old">
+                <span class="price-big__desc">Старая цена</span>
+                <span class="price-big__numb">6 950 ₽</span>
+            </div>
+        </div>
+
+        <a data-fancybox data-src="#hidden-form__buy" data-product="Филин Mini" data-pprice="4890" href="javascript:;" class="btn btn--accent item__btn">Заказать</a>
+    </div>
+
+    <div class="item__content">
+
+        <div class="item__adv">
+            <div class="item__head-item">
+                <p class="item__head-name"><span>1</span> КОМПАКТНЫЙ РАЗМЕР</p>
+                <p class="item__head-text">
+                    Новый уменьшенный корпус Филин Mini и камуфляжная окраска позволяют скрыть фотоловушку так, чтобы ее не смогли обнаружить ни люди, ни животные.
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>2</span> НИЗКОЕ ЭНЕРГОПОТРЕБЛЕНИЕ</p>
+                <p class="item__head-text">
+                    Филин Mini питается от четырех батареек типа AA и в режиме ожидания потребляет всего 0,2 mAh, что позволяет ему работать автономно на протяжении 3 месяцев.
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>3</span> ДОСТУПНАЯ ЦЕНА</p>
+                <p class="item__head-text">
+                    Филин mini обладает хорошим функционалом и демократичной ценой, что не может не радовать начинающих охотников и любителей дикой природы.
+                </p>
+            </div>
+        </div>
+
+        <div class="item__char-wrap">
+            <p class="item__char-name">Характеристики</p>
+            <div class="item__char">
+                <ul>
+                    <li><span class="item__char-t1">Рабочая температура</span><span class="item__char-t2">-30 - 70</span></li>
+                    <li><span class="item__char-t1">Размеры</span><span class="item__char-t2">9 × 14 × 6 см</span></li>
+                    <li><span class="item__char-t1">Матрица</span><span class="item__char-t2">CMOS 12 Mpx</span></li>
+                    <li><span class="item__char-t1">Тепловизор (датчик движения)</span><span class="item__char-t2">3 уровня</span></li>
+                    <li><span class="item__char-t1">Активный режим ожидания</span><span class="item__char-t2">3 мес</span></li>
+                    <li><span class="item__char-t1">ИК-фильтр</span><span class="item__char-t2">автоматический</span></li>
+                    <li><span class="item__char-t1">Внешняя память</span><span class="item__char-t2">Micro-SD до 32 Gb (10 класс)</span></li>
+                    <li><span class="item__char-t1">Формат видеосъемки</span><span class="item__char-t2">AVI, цветное</span></li>
+                </ul>
+                <ul>
+                    <li><span class="item__char-t1">Периодичность снимков</span><span class="item__char-t2">от 1 сек. до 24 ч.</span></li>
+                    <li><span class="item__char-t1">Разрешение видео</span><span class="item__char-t2">Full HD 1920×1080 px</span></li>
+                    <li><span class="item__char-t1">Влагозащита</span><span class="item__char-t2">IP 64</span></li>
+                    <li><span class="item__char-t1">Порты</span><span class="item__char-t2">USB, AV, слот SD-карты</span></li>
+                    <li><span class="item__char-t1">Энергопотребление</span><span class="item__char-t2">0,2 mA (режим ожидания)</span></li>
+                    <li><span class="item__char-t1">Формат фотосъемки</span><span class="item__char-t2">JPEG, цветное</span></li>
+                    <li><span class="item__char-t1">Разрешение фото</span><span class="item__char-t2">12 Mpx / 8 Mpx / 5 Mpx</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="item__desc">
+            <p class="item__char-name">Описание</p>
+            <p class="item__desc-text">
+                Это автономная камера во влагозащищенном корпусе, реагирующая на движение и снимающая появившихся животных<br>Фотоловушка скрытно устанавливается в лесу в местах, где часто появляются животные или птицы. Она включается от ИК-датчика движения и делает снимки с заданной частотой. Фотоловушка Филин mini может работать автономно до трех месяцев, осуществляя запись на подключенную карту памяти емкостью до 32 Гб. Вам понравится ее кадры!<br>Фотоловушка поможет определить выгодные точки для охоты или сделать снимки животных в естественных условиях. Специалистам по безопасности она поможет бороться с незаконной охотой, вырубкой леса и свалками. Каждый снимок снабжается метаданными, которые включают дату и время съемки, и ряд других параметров, с высокой точностью определяющих момент и место события.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Филин 120 -->
+
+
+<section id="120" class="item wrap">
+    
+    <div class="item__img">
+        <h2 class="item__name">Филин <span>120</span></h2>
+
+        <div class="item__galery owl-carousel">
+            <div class="">
+                <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                    <img src="img/items/item2_1.png" alt="Филин 120">
+                </a>
+            </div>
+            <div>
+                <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                    <img src="img/items/item2_2.png" alt="Филин 120">
+                </a>    
+            </div>
+            <div>
+                <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                    <img src="img/items/item2_3.png" alt="Филин 120">
+                </a>    
+            </div>
+            <div>
+                <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                    <img src="img/items/item2_4.png" alt="Филин 120">
+                </a>
+            </div>
+        </div>
+
+        <div class="item__prices price-big">
+            <div class="price-big__new">
+                <span class="price-big__desc">Цена сегодня</span>
+                <span class="price-big__numb">5 890 ₽</span>
+            </div>
+            <div class="price-big__old">
+                <span class="price-big__desc">Старая цена</span>
+                <span class="price-big__numb">7 990 ₽</span>
+            </div>
+        </div>
+
+        <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 120" data-pprice="5890" href="javascript:;" class="btn btn--accent item__btn">Заказать</a>
+    </div>
+
+    <div class="item__content">
+
+        <div class="item__adv">
+            <div class="item__head-item">
+                <p class="item__head-name"><span>1</span> Скорость срабатывания</p>
+                <p class="item__head-text">
+                    Время реагирования камеры составляет всего 0.7 секунды! Ни одно существо не останется незамеченным и Вы получите фотопортреты всех обитателей этих мест!
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>2</span> Угол обзора и чувствительность</p>
+                <p class="item__head-text">
+                    Широкоугольный объектив фотоловушки Филин 120° имеет расширенную зону видимости и даже ночью способен зафиксировать объект на расстоянии до 25 метров!
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>3</span> Удобное управление</p>
+                <p class="item__head-text">
+                    Управление фотоловушкой Филин 120 может осуществляться с пульта ДУ. Благодаря LCD экрану диагональю 2.5" возможен быстрый просмотр отснятых кадров и настройка устройства.
+                </p>
+            </div>
+        </div>
+
+        <div class="item__char-wrap">
+            <p class="item__char-name">Характеристики</p>
+            <div class="item__char">
+                <ul>
+                    <li><span class="item__char-t1">Рабочая температура</span><span class="item__char-t2">-30 - 70</span></li>
+                    <li><span class="item__char-t1">Размеры</span><span class="item__char-t2">9 × 14 × 6 см</span></li>
+                    <li><span class="item__char-t1">Матрица</span><span class="item__char-t2">CMOS 16 Mpx</span></li>
+                    <li><span class="item__char-t1">ИК-фильтр</span><span class="item__char-t2">42 шт.</span></li>
+                    <li><span class="item__char-t1">Тепловизор (датчик движения)</span><span class="item__char-t2">3 уровня</span></li>
+                    <li><span class="item__char-t1">Наложение даты и времени</span><span class="item__char-t2">Есть</span></li>
+                    <li><span class="item__char-t1">Индикатор заряда батареи</span><span class="item__char-t2">Есть</span></li>
+                    <li><span class="item__char-t1">Время срабатывания</span><span class="item__char-t2">0,7 сек.</span></li>
+                    <li><span class="item__char-t1">Внешняя память</span><span class="item__char-t2">SD/SDHC до 32 Гб</span></li>
+                </ul>
+                <ul>
+                    <li><span class="item__char-t1">Активный режим ожидания</span><span class="item__char-t2">3 мес</span></li>
+                    <li><span class="item__char-t1">Формат видеосъемки</span><span class="item__char-t2">AVI, цветное</span></li>
+                    <li><span class="item__char-t1">Разрешение видео</span><span class="item__char-t2">Full HD 1920×1080 px</span></li>
+                    <li><span class="item__char-t1">Формат фотосъемки</span><span class="item__char-t2">JPEG, цветное</span></li>
+                    <li><span class="item__char-t1">Периодичность снимков</span><span class="item__char-t2">от 1 сек. до 24 ч.</span></li>
+                    <li><span class="item__char-t1">Разрешение фото</span><span class="item__char-t2">4032×3024 px</span></li>
+                    <li><span class="item__char-t1">Дисплей</span><span class="item__char-t2">2.5 ”</span></li>
+                    <li><span class="item__char-t1">Влагозащита</span><span class="item__char-t2">IP 64</span></li>    
+                </ul>
+            </div>
+        </div>
+
+        <div class="item__desc">
+            <p class="item__char-name">Описание</p>
+            <p class="item__desc-text">
+                Это автономная камера с ИК-датчиком движения, предназначенная для круглосуточной съемки подвижных объектов.<br>
+                Фотоловушка работает автономно до 3 мес. и делает качественные фото и видеоснимки без участия человека, снимая животных и птиц в их естественной среде обитания. Благодаря компактным размерам и камуфляжной окраске она скрытно устанавливается и срабатывает при приближении движущегося объекта. Ни один фотограф-человек не сможет сравниться с ней в терпении!
+            </p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Филин 120 MMS -->
+
+
+<section id="120mms" class="item wrap">
+    
+    <div class="item__img">
+        <h2 class="item__name">Филин <span>120 MMS</span></h2>
+
+        <div class="item__galery owl-carousel">
+            <div class="">
+                <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                    <img src="img/items/item2_2.png" alt="Филин 120 MMS">
+                </a>
+            </div>
+            <div>
+                <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                    <img src="img/items/item2_3.png" alt="Филин 120 MMS">
+                </a>    
+            </div>
+            <div>
+                <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                    <img src="img/items/item2_4.png" alt="Филин 120 MMS">
+                </a>    
+            </div>
+            <div>
+                <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                    <img src="img/items/item2_1.png" alt="Филин 120 MMS">
+                </a>
+            </div>
+        </div>
+
+        <div class="item__prices price-big">
+            <div class="price-big__new">
+                <span class="price-big__desc">Цена сегодня</span>
+                <span class="price-big__numb">7 490 ₽</span>
+            </div>
+            <div class="price-big__old">
+                <span class="price-big__desc">Старая цена</span>
+                <span class="price-big__numb">11 390 ₽</span>
+            </div>
+        </div>
+
+        <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 120 MMS" data-pprice="7490" href="javascript:;" class="btn btn--accent item__btn">Заказать</a>
+    </div>
+
+    <div class="item__content">
+
+        <div class="item__adv">
+            <div class="item__head-item">
+                <p class="item__head-name"><span>1</span> Автономность</p>
+                <p class="item__head-text">
+                    Филин 120 MMS сделает и пришлет Вам большие четкие фотографии. Или снимет короткие видео-ролики в формате Full HD. Его руки не дрожат, и терпение не иссякает!
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>2</span> Качество съемки</p>
+                <p class="item__head-text">
+                    Широкоугольный объектив фотоловушки Филин 120° имеет расширенную зону видимости и даже ночью способен зафиксировать объект на расстоянии до 25 метров!
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>3</span> Двусторонняя связь</p>
+                <p class="item__head-text">
+                    Управлять своим соглядатаем Вы сможете как с пульта ДУ, если устройство установлено неподалеку, так и со своего смартфона. А фотоотчеты могут поступать прямо в Ваш телефон по MMS..
+                </p>
+            </div>
+        </div>
+
+        <div class="item__char-wrap">
+            <p class="item__char-name">Характеристики</p>
+            <div class="item__char">
+                <ul>
+                    <li><span class="item__char-t1">Рабочая температура</span><span class="item__char-t2">-30 - 70</span></li>
+                    <li><span class="item__char-t1">Размеры</span><span class="item__char-t2">9 × 14 × 6 см</span></li>
+                    <li><span class="item__char-t1">Тепловизор (датчик движения)</span><span class="item__char-t2">3 уровня</span></li>
+                    <li><span class="item__char-t1">Матрица</span><span class="item__char-t2">CMOS 16 Mpx</span></li>
+                    <li><span class="item__char-t1">Внешняя память</span><span class="item__char-t2">SD/SDHC до 32 Гб</span></li>
+                    <li><span class="item__char-t1">Активный режим ожидания</span><span class="item__char-t2">3 мес</span></li>
+                    <li><span class="item__char-t1">ИК-фильтр</span><span class="item__char-t2">42 шт.</span></li>
+                    <li><span class="item__char-t1">Время срабатывания</span><span class="item__char-t2">0,7 сек.</span></li>
+                    <li><span class="item__char-t1">Наложение даты и времени</span><span class="item__char-t2">Есть</span></li>
+                </ul>
+                <ul>
+                    <li><span class="item__char-t1">Индикатор заряда батареи</span><span class="item__char-t2">Есть</span></li>  
+                    <li><span class="item__char-t1">Формат видеосъемки</span><span class="item__char-t2">AVI, цветное</span></li>
+                    <li><span class="item__char-t1">Формат фотосъемки</span><span class="item__char-t2">JPEG, цветное</span></li>
+                    <li><span class="item__char-t1">Разрешение фото</span><span class="item__char-t2">4032×3024 px</span></li>
+                    <li><span class="item__char-t1">Разрешение видео</span><span class="item__char-t2">Full HD 1920×1080 px</span></li>
+                    <li><span class="item__char-t1">Периодичность снимков</span><span class="item__char-t2">от 1 сек. до 24 ч.</span></li>
+                    <li><span class="item__char-t1">Дисплей</span><span class="item__char-t2">2.5 ”</span></li>
+                    <li><span class="item__char-t1">Влагозащита</span><span class="item__char-t2">IP 64</span></li>    
+                </ul>
+            </div>
+        </div>
+
+        <div class="item__desc">
+            <p class="item__char-name">Описание</p>
+            <p class="item__desc-text">
+                Это автономная камера с удаленным управлением в надежном корпусе, который защищает ее от дождя и снега.<br>
+                Фотоловушка будет терпеливо ждать появления движущегося животного или человека и в любое время суток и при любой погоде сделает превосходную фотографию, которую сразу сможет отправить Вам по GPRS. ИК-датчики приводят камеру в действие всего за 0.7 секунды и в кадре фиксируется любой объект в пределах 120 градусов обзора объектива.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Филин 120 MMS 3G -->
+
+
+<section id="120mms3g" class="item wrap">
+    
+    <div class="item__img">
+        <h2 class="item__name">Филин <span>120 MMS 3G</span></h2>
+
+        <div class="item__galery owl-carousel">
+            <div class="">
+                <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS 3G">
+                    <img src="img/items/item2_3.png" alt="Филин 120 MMS 3G">
+                </a>
+            </div>
+            <div>
+                <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS 3G">
+                    <img src="img/items/item2_4.png" alt="Филин 120 MMS 3G">
+                </a>    
+            </div>
+            <div>
+                <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS 3G">
+                    <img src="img/items/item2_1.png" alt="Филин 120 MMS 3G">
+                </a>    
+            </div>
+            <div>
+                <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS 3G">
+                    <img src="img/items/item2_2.png" alt="Филин 120 MMS 3G">
+                </a>
+            </div>
+        </div>
+
+        <div class="item__prices price-big">
+            <div class="price-big__new">
+                <span class="price-big__desc">Цена сегодня</span>
+                <span class="price-big__numb">9 490 ₽</span>
+            </div>
+            <div class="price-big__old">
+                <span class="price-big__desc">Старая цена</span>
+                <span class="price-big__numb">12 990 ₽</span>
+            </div>
+        </div>
+
+        <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 120 MMS 3G" data-pprice="9490" href="javascript:;" class="btn btn--accent item__btn">Заказать</a>
+    </div>
+
+    <div class="item__content">
+
+        <div class="item__adv">
+            <div class="item__head-item">
+                <p class="item__head-name"><span>1</span> Камера срабатывает за 0.7 секунды</p>
+                <p class="item__head-text">
+                    42 ИК-датчика движения включают камеру всего за 0.7 секунды. Это позволяет зафиксировать даже быстро бегущее животное или человека.
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>2</span> Угол обзора объектива 120 градусов</p>
+                <p class="item__head-text">
+                    Угол обзора объектива составляет 120 градусов. Фокусное расстояние 3,14. Ночная съемка до 25 метров. Матрица 16 мегапикселей. Профессиональное оборудование.
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>3</span> Модуль GSM-связи</p>
+                <p class="item__head-text">
+                    Встроенный GSM-модуль позволяет управлять фотоловушкой в реальном времени из любой точки мира. Команды передаются по SMS. Снимки возвращаются по MMS и email.
+                </p>
+            </div>
+        </div>
+
+        <div class="item__char-wrap">
+            <p class="item__char-name">Характеристики</p>
+            <div class="item__char">
+                <ul>
+                    <li><span class="item__char-t1">Рабочая температура</span><span class="item__char-t2">-30 - 70</span></li>
+                    <li><span class="item__char-t1">Размеры</span><span class="item__char-t2">9 × 14 × 6 см</span></li>
+                    <li><span class="item__char-t1">Тепловизор (датчик движения)</span><span class="item__char-t2">3 уровня</span></li>
+                    <li><span class="item__char-t1">Матрица</span><span class="item__char-t2">CMOS 16 Mpx</span></li>
+                    <li><span class="item__char-t1">Внешняя память</span><span class="item__char-t2">SD/SDHC до 32 Гб</span></li>
+                    <li><span class="item__char-t1">Активный режим ожидания</span><span class="item__char-t2">3 мес</span></li>
+                    <li><span class="item__char-t1">ИК-фильтр</span><span class="item__char-t2">42 шт.</span></li>
+                    <li><span class="item__char-t1">Время срабатывания</span><span class="item__char-t2">0,7 сек.</span></li>
+                    <li><span class="item__char-t1">Наложение даты и времени</span><span class="item__char-t2">Есть</span></li>
+                </ul>
+                <ul>
+                    <li><span class="item__char-t1">Индикатор заряда батареи</span><span class="item__char-t2">Есть</span></li>                    
+                    <li><span class="item__char-t1">Формат видеосъемки</span><span class="item__char-t2">AVI, цветное</span></li>
+                    <li><span class="item__char-t1">Формат фотосъемки</span><span class="item__char-t2">JPEG, цветное</span></li>
+                    <li><span class="item__char-t1">Разрешение фото</span><span class="item__char-t2">4032×3024 px</span></li>
+                    <li><span class="item__char-t1">Разрешение видео</span><span class="item__char-t2">Full HD 1920×1080 px</span></li>
+                    <li><span class="item__char-t1">Периодичность снимков</span><span class="item__char-t2">от 1 сек. до 24 ч.</span></li>
+                    <li><span class="item__char-t1">Дисплей</span><span class="item__char-t2">2.5 ”</span></li>
+                    <li><span class="item__char-t1">Влагозащита</span><span class="item__char-t2">IP 64</span></li>    
+                </ul>
+            </div>
+        </div>
+
+        <div class="item__desc">
+            <p class="item__char-name">Описание</p>
+            <p class="item__desc-text">
+                Это автономное устройство фото и видео фиксации происходящего с управлением по SMS и получения фотографий по MMS и email.<br>
+                Фотоловушка Филин 120 MMS/3G оборудована 16-мегапиксельной камерой с углом обзора в 120° и проводит фото и видео съемку движущихся поблизости объектов. Чувствительности камеры хватает для съемки ночью объектов на расстоянии до 25 метров. Встроенный модуль GSM-связи позволяет управлять камерой командами по SMS и получать снимки в формате MMS и на email.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Аксессуары -->
+
+
+<section id="ax" class="ax__wrap wrap">
+    <h2 class="ax__title">АКСЕССУАРЫ ДЛЯ <span>УВЕЛИЧЕНИЯ МОЩНОСТИ</span></h2>
+
+    <div class="ax">
+        <div class="ax__item">
+            <div class="ax__img">
+                <img src="img/ax1.jpg" alt="Аккумулятор">
+                <p class="ax__price">1 990 ₽</p>
+            </div>
+            <div class="ax__content">
+                <p class="ax__name">Солнечный аккумулятор</p>
+                <p class="ax__text">Солнечная батарея Sun-Light отлично послужит в тех ситуациях, когда Вам будет необходимо установить фотоловушку на длительный период времени на улице без возможности смены аккумулятора. Она будет сама подзаряжаться посредствам воздействия солнечных  лучей и Вы сможете  оставить Вашу фотоловушку на долго!</p>
+                <a href="#" data-ax_name="Солнечный аккумулятор" data-ax_price="1990" class="btn btn--other ax__btn">
+                    <i class="material-icons">add_shopping_cart</i>
+                    <span>ДОБАВИТЬ К ЗАКАЗУ</span>
+                </a>
+            </div>
+        </div>
+        <div class="ax__item">
+            <div class="ax__img">
+                <img src="img/ax2.jpg" alt="Карта памяти">
+                <p class="ax__price">690 ₽</p>
+            </div>
+            <div class="ax__content">
+                <p class="ax__name">Карта памяти 10 класса</p>
+                <p class="ax__text">Для надежной работы фотоловушки требуется карта памяти только 10 класса. Мы позаботились о Вас и имеем в распоряжении имеено такие карты памяти. Приобретая фотоловушку вместе с картой памяти у нас, Вы расшираяете гарантию до 2 лет.</p>
+                <a href="#" data-ax_name="Карта памяти 10 класса" data-ax_price="690" class="btn btn--other ax__btn">
+                    <i class="material-icons">add_shopping_cart</i>
+                    <span>ДОБАВИТЬ К ЗАКАЗУ</span>
+                </a>
+            </div>
+        </div>
+        <div class="ax__item">
+            <div class="ax__img">
+                <img src="img/ax3.jpg" alt="Стальной корпус">
+                <p class="ax__price">3 990 ₽</p>
+            </div>
+            <div class="ax__content">
+                <p class="ax__name">Стальной корпус</p>
+                <p class="ax__text">Приобретите стальной корпус для фотоловушки Филин 120 и защитите её от любых механических повреждений.</p>
+                <a href="#" data-ax_name="Стальной корпус" data-ax_price="3990" class="btn btn--other ax__btn">
+                    <i class="material-icons">add_shopping_cart</i>
+                    <span>ДОБАВИТЬ К ЗАКАЗУ</span>
+                </a>
+            </div>
+        </div>
+        <div class="ax__item">
+            <div class="ax__img">
+                <img src="img/ax4.jpg" alt="GSM Усилитель">
+                <p class="ax__price">2 990 ₽</p>
+            </div>
+            <div class="ax__content">
+                <p class="ax__name">GSM Усилитель</p>
+                <p class="ax__text">Приобретите стальной корпус для фотоловушки Филин 120 и защитите её от любых механических повреждений.</p>
+                <a href="#" data-ax_name="GSM Усилитель" data-ax_price="2990" class="btn btn--other ax__btn">
+                    <i class="material-icons">add_shopping_cart</i>
+                    <span>ДОБАВИТЬ К ЗАКАЗУ</span>
+                </a>
+            </div>
+        </div> 
+    </div>
+
+    <a data-fancybox data-src="#hidden-form__buy" href="javascript:;" class="btn btn--accent ax__btn-2">СФОРМИРОВАТЬ ЗАКАЗ</a>
+
+</section>
+
+
+<!-- Консультация -->
+
+<div class="consult__page">
+<section class="consult__wrap wrap">
+    
+    <h2 class="consult__title">КОНСУЛЬТАЦИЯ <span>ЭКСПЕРТА ПО ФОТОЛОВУШКАМ</span></h2>
+
+    <div class="consult">
+        
+        <div class="consult__img">
+            <img src="img/expert.jpg" alt="Эксперт">
+        </div>
+
+        <div class="consult__content">
+            <p class="consult__text">
+                "Я уже треть своей жизни провожу в окружении лесов, занимаясь охотой, даже умудрился получить звание почетного охотника. И за все время чего только не испробовал. Что касаемо фотоловушки, то меня с ним познакомил мой сын. Он на день рождения подарил мне этот аппарат, ему знакомые посоветовали: "Если отец охотник, то бери фотоловушку Филин, не прогадаешь". Честно, с трудом верил в силу этого устройства, он выглядит как будто детская игрушка, как у внуков.
+            </p>
+
+
+            <div class="consult__form form">
+                <p class="form__name">Оставьте заявку</p>
+                <p class="form__desc line line--accent">И наш специалист по фотолувушкам бесплатно поможет вам в выборе</p>
+
+                <form action="/send_new.php" method="post">
+                    <div class="form__input" data-target='form-body-name'>
+                        <i class="material-icons">person</i>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="form-body-name">
+                            <label class="mdl-textfield__label" for="form-body-name">Введите имя...</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form__input"  data-target='form-body-phone'>
+                        <i class="material-icons">phone</i>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-body-phone">
+                            <label class="mdl-textfield__label" for="form-body-phone">Введите имя...</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name='variant' value="first" >
+                    <input type="hidden" name="type" value="header">
+                    <input type="hidden" name='landing' value="Фотоловушки Осн." >
+                    <input type="hidden" name='category_title' value="Консультация">
+                    <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
+                    <input type="hidden" name='product_title' class="product_title" value="">
+
+                    <button class="btn btn--accent form__btn pulse">Оставить заявку</button>
+
+                </form>
+                
+            </div>
+
+
+        </div>
+    </div>
+</section>
+</div>
+
+
+<!-- ПОЧЕМУ БОЛЕЕ 12 000 ПОКУПАТЕЛЕЙ ВЫБИРАЮТ НАС -->
+
+
+<section class="service__wrap wrap" id="service">
+    <h2 class="service__title">ПОЧЕМУ <span>БОЛЕЕ 12 000 ПОКУПАТЕЛЕЙ</span> ВЫБИРАЮТ НАС</h2>
+
+    <div class="service">
+        <div class="service__container">
+
+
+            <div class="service__item--big service__item--1">
+                <p class="service__name">Проверяем качество товара лично!</p>
+                <p class="service__text">Все товары, представленные в нашем магазине, протестированы нами лично. Мы уверены в их качестве, исправности и отсутствии дефектов!</p>
+            </div>
+
+
+            <div class="service__row">
+
+                <div class="service__item box box--small">
+                    <div class="box__content">
+                        <p class="box__name">Товар сертифицирован</p>
+                        <p class="box__text">Все фотоловушки сертифицированы, произведены по передовым технологиям с использованием самых качественных материалов. Поступают от производителя в полной заводской комплектации.</p>
+                    </div>
+                </div>
+
+                <div class="service__item box box--small">
+                    <div class="box__content">
+                        <p class="box__name">Обмен и возврат в течении 14 дней!</p>
+                        <p class="box__text">Если товар Вам просто не понравится, Вы можете его вернуть обратно или обменять на другой товар в течении 14 дней.</p>
+                    </div>
+                    <div class="box__img">
+                        <img src="img/svg/service/1.svg" alt="Обмен">
+                    </div>
+                </div>
+
+                <div class="service__item box box--small">
+                    <div class="box__content">
+                        <p class="box__name">Гарантия 12 месяцев</p>
+                        <p class="box__text">Мы несём всю полноту ответственности по всем вопросам гарантийного обслуживания.</p>
+                    </div>
+                    <div class="box__img">
+                        <img src="img/svg/service/2.svg" alt="Гарантия">
+                    </div>                    
+                </div>
+
+                <div class="service__item box box--small">
+                    <div class="box__content">
+                        <p class="box__name">Более 5 лет профессиональной работы</p>
+                        <p class="box__text">Компания Photo-Hunter основана в 2013 году, на данный момент мы занимаем одну из лидирующих позиций на российском рынке по продаже фотоловушек линеек Филин.</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="service__row">
+                
+                <div class="service__item box box--small">
+                    <div class="box__content">
+                        <p class="box__name">Система скидок, бонусов и поощрений</p>
+                        <p class="box__text">Мы заботимся о лояльности наших клиентов, поэтому разработали для Вас свою систему скидок, бонусов за повторные покупки, а также подобрали подарки.</p>
+                    </div>
+                </div>
+
+                <div class="service__item box box--small">
+                    <div class="box__content">
+                        <p class="box__name">8 (800) 555-27-39</p>
+                        <p class="box__text">С радостью ответим на все вопросы, дадим рекомендации и полезные советы!</p>
+                    </div>
+                    <div class="box__img">
+                        <img src="img/svg/service/3.svg" alt="Телефон">
+                    </div>
+                </div>       
+                
+                <div class="service__item box box--small">
+                    <div class="box__content">
+                        <p class="box__name">Бесплатное SMS и E-mail cопровождение заказа!</p>
+                        <p class="box__text">Ваш заказ не затеряется! О всех изменениях статуса заказа, Вы будете проинформированы по SMS и E-mail, причем бесплатно!</p>
+                    </div>
+                </div>
+
+                <div class="service__item box box--small">
+                    <div class="box__content">
+                        <p class="box__name">Все официально!</p>
+                        <p class="box__text">Каждый заказ сопровождается полным набором документов с печатью организации и подписью ответственного менеджера.</p>
+                    </div>
+                    <div class="box__img">
+                        <img src="img/svg/service/4.svg" alt="Телефон">
+                    </div>
+                </div>  
+
+            </div>
+
+
+            <div class="service__item--big service__item--2">
+                <p class="service__name">Профессиональная техническая поддержка</p>
+                <p class="service__text">Мы имеем свой технический отдел по работе с клиентами в котором вы всегда сможете получить бесплатный развернутый ответ на любой возникающий вопрос.</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    
+    <a data-fancybox data-src="#hidden-form__question" href="javascript:;" class="btn btn--accent service__btn">Задать вопрос</a>
+    <p class="service__support">Остались вопросы? Оставьте заявку, мы свяжемся с вами в ближайшее время</p>
+
+</section>
+
+
+<!-- Доставка -->
+
+
+<section class="deliv__wrap wrap" id="deliv">
+    <h2 class="deliv__title">Доставка</h2>
+
+    <div class="deliv">
+        
+        <div class="deliv__item box box--small">
+            <div class="box__img">
+                <img src="img/svg/service/5.svg" alt="Магазин">
+            </div>
+            <div class="box__content">
+                <p class="box__name">Самовывоз из магазинов</p>
+                <ul class="box__text">
+                    <li>м. Площадь Восстания<br>Лиговский пр., д. 50, к. 16, офис 112.</li>
+                    <li>м. Семеновская<br>Семеновский пер., д. 4.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="deliv__item box box--big">
+            <div class="box__img">
+                <img src="img/svg/service/6.svg" alt="Курьер">
+            </div>
+            <div class="box__content">
+                <p class="box__name">Доставка курьером</p>
+                <ul class="box__text">
+                    <li>Стоимость доставки заказа из нашего магазина до двери - 300 рублей.</li>
+                    <li>Доставка осуществляется в день заказа или на следующий день, с момента подтверждения. За час до доставки курьер связывается с получателем.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="deliv__item box box--small">
+            <div class="box__img">
+                <img src="img/svg/service/7.svg" alt="Магазин">
+            </div>
+            <div class="box__content">
+                <p class="box__name">Доставка Почтой России</p>
+                 <p class="box__text">
+                    При выборе Способа доставки «Почта РФ» - Вы оплачиваете товар непосредственно при получении заказа в почтовых отделениях связи.
+                </p>
+            </div>
+        </div>
+
+        <div class="deliv__item box box--big">
+            <div class="box__img">
+                <img src="img/svg/service/8.svg" alt="ТК СДЕК">
+            </div>
+            <div class="box__content">
+                <p class="box__name">Доставка ТК СДЕК</p>
+                <ul class="box__text">
+                    <li>СДЕК "Посылка склад-дверь" - доставка осуществляется с оплатой при получении до вашего точного адреса.</li>
+                    <li>СДЕК "Посылка склад-склад" - доставка осуществляется до выбранного вами пункта самовывоза ТК СДЕК в Вашем городе. Возможна доставка с оплатой при получении.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Оплата -->
+
+
+<section class="pay__wrap wrap" id="pay">
+    <h2 class="pay__title">Оплата</h2>
+
+    <div class="pay">
+
+        <div class="pay__item box box--all">
+            <div class="box__img">
+                <img src="img/svg/service/9.svg" alt="Наличные">
+            </div>
+            <div class="box__content">
+                <p class="box__name">Оплата наличными</p>
+                <ul class="box__text">
+                    <li>Наличными курьеру при получении товара с доставкой "до двери".</li>
+                    <li>Оплата в офисе компании при самовывозе.</li>
+                    <li>Оплата в Пункте выдачи заказов (ПВЗ) при выборе наложенного платежа.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pay__item box box--all">
+            <div class="box__img">
+                <img src="img/svg/service/10.svg" alt="Онлайн">
+            </div>
+            <div class="box__content">
+                <p class="box__name">Оплата в режиме онлайн</p>
+                <p class="box__text">
+                    Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платежный шлюз АЛЬФАБАНК. Соединение с платежным шлюзом и передача информации осуществляется в защищенном режиме с использованием протокола шифрования SSL. В случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By Visa или MasterCard SecureCode для проведения платежа также может потребоваться ввод специального пароля.
+                </p>
+            </div>
+        </div>
+
+        <div class="pay__item box box--all">
+            <div class="box__img">
+                <img src="img/svg/service/11.svg" alt="Безнал">
+            </div>
+            <div class="box__content">
+                <p class="box__name">Безналичный расчет</p>
+                <p class="box__text">
+                    Оплата по безналичному расчету для юридических лиц и индивидуальных предпринимателей на основании счета. Для получения счета необходимо отправить запрос в свободной форме и прикрепить реквизиты вашей организации на наш адрес электронной почты (см. Контакты). После согласования заказа клиенту выставляется счёт для оплаты в котором будут проставлены реквизиты и указана сумма. Распечатанный счет можно оплатить любым удобным для вас способом (например, через систему Банк-клиент). Оригиналы бухгалтерских документов высылаются вместе с покупкой.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Консультация -->
+
+<div class="consult__page">
+<section class="consult__wrap wrap">
+    
+    <h2 class="consult__title">КОНСУЛЬТАЦИЯ <span>ЭКСПЕРТА ПО ФОТОЛОВУШКАМ</span></h2>
+
+    <div class="consult">
+        
+        <div class="consult__img">
+            <img src="img/expert.jpg" alt="Эксперт">
+        </div>
+
+        <div class="consult__content">
+            <p class="consult__text">
+                "Я уже треть своей жизни провожу в окружении лесов, занимаясь охотой, даже умудрился получить звание почетного охотника. И за все время чего только не испробовал. Что касаемо фотоловушки, то меня с ним познакомил мой сын. Он на день рождения подарил мне этот аппарат, ему знакомые посоветовали: "Если отец охотник, то бери фотоловушку Филин, не прогадаешь". Честно, с трудом верил в силу этого устройства, он выглядит как будто детская игрушка, как у внуков.
+            </p>
+
+
+            <div class="consult__form form">
+                <p class="form__name">Оставьте заявку</p>
+                <p class="form__desc line line--accent">И наш специалист по фотолувушкам бесплатно поможет вам в выборе</p>
+
+                <form action="/send_new.php" method="post">
+                    <div class="form__input" data-target='form-footer-name'>
+                        <i class="material-icons">person</i>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="form-footer-name">
+                            <label class="mdl-textfield__label" for="form-footer-name">Введите имя...</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form__input"  data-target='form-footer-phone'>
+                        <i class="material-icons">phone</i>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-footer-phone">
+                            <label class="mdl-textfield__label" for="form-footer-phone">Введите имя...</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name='variant' value="first" >
+                    <input type="hidden" name="type" value="header">
+                    <input type="hidden" name='landing' value="Фотоловушки Осн." >
+                    <input type="hidden" name='category_title' value="Консультация">
+                    <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
+                    <input type="hidden" name='product_title' class="product_title" value="">
+
+                    <button class="btn btn--accent form__btn pulse">Оставить заявку</button>
+
+                </form>
+                
+            </div>
+
+
+        </div>
+    </div>
+</section>
+</div>
+
+
+
+<!-- Контакты -->
+
+
+<section class="cont__page" id="contacts">
+    <div class="cont__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46580.4770850312!2d30.25213668386406!3d59.91596772825931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631b0cdce1795%3A0x685a88cb407697f7!2sGyrocycle.ru!5e0!3m2!1sru!2sru!4v1536221316308" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="cont__content">
+        <h2 class="cont__title">Контакты</h2>
+
+        <div class="cont__numb--big">
+            <a href="tel:88005552739">8 (800) 555-27-39</a>
+            <p>Бесплатная горячая линия</p>
+        </div>
+
+        <div class="cont__adress">
+            <div class="cont__adress--item">
+                <p>г. Санкт-Петербург.<br>Лиговский проспект<br>Лиговский пр.50 корпус 16, офис 122</p>
+                <a href="tel:88127482669">8 (812) 748-26-69</a>
+            </div>
+            <div class="cont__adress--item">
+                <p>г. Москва<br>м. Семеновская<br>Семёновский пер д.4</p>
+                <a href="tel:88127482669">8 (499) 110-82-46</a>
+            </div>
+        </div>
+        <div class="cont__footer">
+            <p>ИП Фанкухин Марк Игоревич<br>Юридический адрес: 191040,<br>г. Санкт-Петербург, Лиговский пр., д. 50, к. 16, оф. 122<br>ИНН: 470315962303<br>ОГРНИП: 315470300006520</p>
+            <div class="cont__footer-img">
+                <img src="img/logo.png" alt="Photo-Hunter">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Скрытые формы -->
+
+
+<div id="hidden-form__buy" class="hidden-form__wrap" style="display: none;">
+    <div class="hidden-form">
+        <div class="hidden-form__head hidden-form__head--buy">
+            <h4>Отличный выбор!</h4>
+            <p>Заполните поля ниже. Наш менеджер свяжется с вами в течении 10 минут.</p>
+        </div>
+        <div class="hidden-form__body">
+
+            <form action="/send_new.php" method="post">
+                <div class="form__input" data-target='form-hidden1-name'>
+                    <i class="material-icons">person</i>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="form-hidden1-name">
+                        <label class="mdl-textfield__label" for="form-hidden1-name">Введите имя...</label>
+                    </div>
+                </div>
+                
+                <div class="form__input"  data-target='form-hidden1-phone'>
+                    <i class="material-icons">phone</i>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden1-phone">
+                        <label class="mdl-textfield__label" for="form-hidden1-phone">Введите имя...</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                </div>
+
+                <input type="hidden" name='variant' value="first" >
+                <input type="hidden" name="type" value="header">
+                <input type="hidden" name='landing' value="Фотоловушки Осн." >
+                <input type="hidden" name='category_title' value="Консультация">
+                <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
+                <input type="hidden" name='product_title' class="product_title" value="">
+
+                <button class="btn btn--accent form__btn pulse">Оставить заявку</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Дефолт -->
+
+
+<div id="hidden-form__default" class="hidden-form__wrap" style="display: none;">
+    <div class="hidden-form">
+        <div class="hidden-form__head hidden-form__head--buy">
+            <h4>Оставьте заявку</h4>
+            <p>Наш менеджер свяжется с вами в течении 10 минут.</p>
+        </div>
+        <div class="hidden-form__body">
+
+            <form action="/send_new.php" method="post">
+                <div class="form__input" data-target='form-hidden1-name'>
+                    <i class="material-icons">person</i>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="form-hidden1-name">
+                        <label class="mdl-textfield__label" for="form-hidden1-name">Введите имя...</label>
+                    </div>
+                </div>
+                
+                <div class="form__input"  data-target='form-hidden1-phone'>
+                    <i class="material-icons">phone</i>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden1-phone">
+                        <label class="mdl-textfield__label" for="form-hidden1-phone">Введите имя...</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                </div>
+
+                <input type="hidden" name='variant' value="first" >
+                <input type="hidden" name="type" value="header">
+                <input type="hidden" name='landing' value="Фотоловушки Осн." >
+                <input type="hidden" name='category_title' value="Консультация">
+                <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
+                <input type="hidden" name='product_title' class="product_title" value="">
+
+                <button class="btn btn--accent form__btn pulse">Оставить заявку</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Скчать -->
+
+
+<div id="hidden-form__download" class="hidden-form__wrap" style="display: none;">
+    <div class="hidden-form">
+        <div class="hidden-form__head hidden-form__head--download">
+            <h4>5 советов по использованию фотоловушки</h4>
+            <p>Заполните поля ниже. Файл будет отправлен вам на электронную почту.</p>
+        </div>
+        <div class="hidden-form__body">
+
+            <form action="/send_new.php" method="post">
+                <div class="form__input" data-target='form-hidden1-name'>
+                    <i class="material-icons">person</i>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="form-hidden1-name">
+                        <label class="mdl-textfield__label" for="form-hidden1-name">Введите имя...</label>
+                    </div>
+                </div>
+                
+                <div class="form__input"  data-target='form-hidden1-phone'>
+                    <i class="material-icons">phone</i>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden1-phone">
+                        <label class="mdl-textfield__label" for="form-hidden1-phone">Введите имя...</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                </div>
+
+                <input type="hidden" name='variant' value="first" >
+                <input type="hidden" name="type" value="header">
+                <input type="hidden" name='landing' value="Фотоловушки Осн." >
+                <input type="hidden" name='category_title' value="Консультация">
+                <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
+                <input type="hidden" name='product_title' class="product_title" value="">
+
+                <button class="btn btn--accent form__btn pulse">Оставить заявку</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Консультация -->
+
+
+<div id="hidden-form__question" class="hidden-form__wrap" style="display: none;">
+    <div class="hidden-form">
+        <div class="hidden-form__head hidden-form__head--question">
+            <h4>Оставьте заявку</h4>
+            <p>И наши специалисты проконсутьтируют вас по любому вопросу в ближайшее время.</p>
+        </div>
+        <div class="hidden-form__body">
+
+            <form action="/send_new.php" method="post">
+                <div class="form__input" data-target='form-hidden1-name'>
+                    <i class="material-icons">person</i>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="form-hidden1-name">
+                        <label class="mdl-textfield__label" for="form-hidden1-name">Введите имя...</label>
+                    </div>
+                </div>
+                
+                <div class="form__input"  data-target='form-hidden1-phone'>
+                    <i class="material-icons">phone</i>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden1-phone">
+                        <label class="mdl-textfield__label" for="form-hidden1-phone">Введите имя...</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                </div>
+
+                <input type="hidden" name='variant' value="first" >
+                <input type="hidden" name="type" value="header">
+                <input type="hidden" name='landing' value="Фотоловушки Осн." >
+                <input type="hidden" name='category_title' value="Консультация">
+                <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
+                <input type="hidden" name='product_title' class="product_title" value="">
+
+                <button class="btn btn--accent form__btn pulse">Получить консультацию</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="js/scripts.min.js"></script>
+</body>
+</html>

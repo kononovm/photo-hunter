@@ -1,0 +1,65 @@
+.ax {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&__item {
+		width: 610px;
+		background: #fff;
+		margin-bottom: 20px;
+		box-shadow: $shadow;
+		border-radius: 5px;
+		padding: 20px;
+		display: flex;
+	}
+	&__img {
+		width: 170px;
+		flex-shrink: 0;
+		margin-right: 20px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		img {
+			max-width: 100%;
+		}
+	}
+	&__price {
+		font-size: 32px;
+		font-weight: 900;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__name {
+		font-size: 20px;
+		font-weight: 700;
+	}
+	&__text {
+		font-size: 16px;
+	}
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px;
+		width: 295px;
+		i {
+			color: rgba(0,0,0, .6);
+			margin-right: 10px;
+		}
+		&--active {
+			border: 1px dashed $accent;
+			color: $accent;
+			transition: .3s;
+			i {
+				color: $accent;
+			}
+		}
+	}
+	&__btn-2 {
+		width: 400px;
+		margin: 30px auto 0 auto;
+	}
+}

@@ -1,0 +1,80 @@
+.header {
+	background: rgba(0,0,0, .5);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+	height: 100px;
+	color: #fff;
+	box-shadow: 0 5px 12px rgba(0,0,0, .14);
+	&__logo {
+		display: flex;
+		align-items: center;
+		img {
+			width: 60px;
+			height: 60px;
+		}
+		p {
+			margin-bottom: 0;
+			line-height: 1.3em;
+			margin-left: 20px;
+			padding-left: 20px;
+			border-left: 1px dashed rgba(255,255,255, .3)
+		}
+	}
+	&__nav {
+		a {
+			color: #fff;
+			font-weight: 300;
+			padding: 20px 10px;
+			position: relative;
+			&:before {
+				width: 0px;
+			}
+			&:hover {
+				color: $accent;
+				transition: .3s;
+				&:before {
+					width: 20px;
+					transition: .5s;
+				}
+
+			}
+		}
+	}
+	&__right {
+		display: flex;
+		align-items: center;
+	}
+	&__wts {
+		fill: #fff;
+		&:hover {
+			fill: $accent;
+			transition: .3s;
+		}
+	}
+	&__menu {
+		display: none;
+	}
+	&__phone {
+		margin-left: 20px;
+		color: #fff;
+		text-align: center;
+		p {
+			margin-bottom: 0;
+			font-size: 18px;
+			font-weight: 700;
+		}
+		span {
+			font-size: 14px;
+			font-weight: 300;
+		}
+		&:hover {
+			color: $accent;
+			transition: .3s;
+		}
+		&--hidden {
+			display: none;
+		}
+	}
+}

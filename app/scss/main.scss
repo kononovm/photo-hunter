@@ -1,0 +1,96 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+// @media only screen and (max-width : 1280px)
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	font-family: $font;
+	overflow-x: hidden;
+	background: #FAFAFA;
+}
+
+input{
+    -webkit-box-shadow: inset 0 0 0 50px #fff;
+}
+
+a {
+	text-decoration: none;
+}
+
+a, button, input {
+	outline: none;
+}
+
+p {
+	font-size: 16px;
+}
+
+ul {
+	font-size: 16px;
+}
+
+.wrap {
+	width: 1280px;
+	padding: 20px;
+	margin: 40px auto 0 auto;
+}
+
+h2 {
+	font-size: 32px;
+	font-weight: 700;
+	text-align: center;
+	padding-bottom: 15px;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		width: 260px;
+		bottom: 0;
+		left: calc(50% - 130px);
+		border-bottom: 1px dashed rgba(0,0,0, .6);
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border: 1px solid rgba(0,0,0, .6);
+		transform: rotate(45deg);
+		background: #fafafa;
+		bottom: -5px;
+		left: calc(50% - 5px);
+	}
+	span {
+		color: $accent;
+	}
+}
+
+@import "blocks/components/header";
+@import "blocks/components/form";
+@import "blocks/components/btn";
+@import "blocks/components/item-min";
+@import "blocks/components/price-big";
+@import "blocks/components/price-sm";
+@import "blocks/components/box";
+@import "blocks/components/line";
+
+@import "blocks/main";
+@import "blocks/desc";
+@import "blocks/prim";
+@import "blocks/cat";
+@import "blocks/item";
+@import "blocks/ax";
+@import "blocks/consult";
+@import "blocks/service";
+@import "blocks/deliv";
+@import "blocks/pay";
+@import "blocks/cont";
+@import "blocks/hidden-form";

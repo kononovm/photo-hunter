@@ -1,0 +1,23 @@
+.price-sm {
+	&__new {
+		font-size: 24px;
+		font-weight: 900;
+		margin-bottom: 0;
+	}
+	&__old {
+		font-size: 18px;
+		font-weight: 300;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 110%;
+			height: 1px;
+			background: rgba(0,0,0, .4);
+			left: 0;
+			top: 50%;
+			transform: rotate(350deg)
+
+		}
+	}
+}

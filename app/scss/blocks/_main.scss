@@ -1,0 +1,30 @@
+.main__page {
+	background: url('../img/bg.jpg') no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+.main {
+	width: 820px;
+	&__title {
+		color: #fff;
+		font-weight: 500;
+		font-size: 46px;
+		text-shadow: 0 3px 6px rgba(0,0,0, .5);
+		margin-top: 0;
+	}
+	&__subtitle {
+		color: #fff;
+		font-size: 30px;
+		font-weight: 300;
+		width: 505px;
+		line-height: 45px;
+	}
+	&__form {
+		background: #fff;
+		width: 505px;
+		padding: 30px;
+		border-radius: 5px;
+		box-shadow: 0 1px 3px rgba(0,0,0, .4);
+		margin: 40px 0;
+	}
+}

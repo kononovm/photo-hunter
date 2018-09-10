@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.995 98.995">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #707070;
+        stroke-dasharray: 2 5;
+      }
+
+      .cls-2 {
+        fill: #1d2120;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="_1" data-name="1" transform="translate(-1451 -263)">
+    <g id="Rectangle_115" data-name="Rectangle 115" class="cls-1" transform="translate(1500.498 263) rotate(45)">
+      <rect class="cls-3" width="70" height="70"/>
+      <rect class="cls-4" x="0.5" y="0.5" width="69" height="69"/>
+    </g>
+    <g id="exchange" transform="translate(1479.963 292)">
+      <g id="Group_89" data-name="Group 89" transform="translate(6.755 5.529)">
+        <g id="Group_88" data-name="Group 88">
+          <path id="Path_40" data-name="Path 40" class="cls-2" d="M111.6,77.314l-11.372-6.3a1.9,1.9,0,0,0-1.848,0h0l-11.372,6.3a1.908,1.908,0,0,0-.983,1.668V91.5a1.908,1.908,0,0,0,.983,1.668l11.372,6.3a1.9,1.9,0,0,0,1.848,0l11.372-6.3a1.908,1.908,0,0,0,.983-1.668V78.982A1.908,1.908,0,0,0,111.6,77.314ZM99.137,72.38a.342.342,0,0,1,.334,0l4.541,2.516L93.06,80.964l-4.647-2.642Zm-.614,25.387L87.765,91.806a.345.345,0,0,1-.178-.3V79.649l5.076,2.886,0,0,5.857,3.33Zm-3.872-15.9,10.973-6.08,4.719,2.614L99.309,84.517Zm16.37,9.636a.345.345,0,0,1-.178.3l-10.758,5.961V85.873l10.936-6.059Z" transform="translate(-86.025 -70.773)"/>
+        </g>
+      </g>
+      <g id="Group_91" data-name="Group 91" transform="translate(9.254 17.504)">
+        <g id="Group_90" data-name="Group 90">
+          <path id="Path_41" data-name="Path 41" class="cls-2" d="M123.317,226.436l-4.139-2.28a.781.781,0,0,0-1.158.684v3.3a.781.781,0,0,0,.4.684l4.139,2.28a.781.781,0,0,0,1.158-.684v-3.3A.781.781,0,0,0,123.317,226.436Zm-1.158,2.665-2.577-1.419v-1.519l2.577,1.419Z" transform="translate(-118.02 -224.06)"/>
+        </g>
+      </g>
+      <g id="Group_93" data-name="Group 93" transform="translate(14.582 26.903)">
+        <g id="Group_92" data-name="Group 92">
+          <path id="Path_42" data-name="Path 42" class="cls-2" d="M189.447,345.595l-2.07-1.14a.781.781,0,0,0-.754,1.369l2.07,1.14a.781.781,0,0,0,.754-1.368Z" transform="translate(-186.22 -344.358)"/>
+        </g>
+      </g>
+      <g id="Group_95" data-name="Group 95" transform="translate(11.629 5.705)">
+        <g id="Group_94" data-name="Group 94">
+          <path id="Path_43" data-name="Path 43" class="cls-2" d="M173.171,75.8l1.441-1.441a.781.781,0,0,0-.552-1.333h-3.88a.781.781,0,0,0-.781.781v3.88a.781.781,0,0,0,1.333.552l1.316-1.316a18.44,18.44,0,0,1-22.54,27.325.781.781,0,0,0-.619,1.434,19.942,19.942,0,0,0,7.916,1.638,20.189,20.189,0,0,0,3.621-.328A20,20,0,0,0,173.171,75.8Zm-2.21,0V74.588h1.213Z" transform="translate(-148.418 -73.026)"/>
+        </g>
+      </g>
+      <g id="Group_97" data-name="Group 97" transform="translate(9.254 35.633)">
+        <g id="Group_96" data-name="Group 96">
+          <path id="Path_44" data-name="Path 44" class="cls-2" d="M119.234,456.243l-.03-.019a.781.781,0,1,0-.813,1.334l.03.019a.781.781,0,1,0,.813-1.334Z" transform="translate(-118.016 -456.11)"/>
+        </g>
+      </g>
+      <g id="Group_99" data-name="Group 99" transform="translate(29.316 2.843)">
+        <g id="Group_98" data-name="Group 98">
+          <path id="Path_45" data-name="Path 45" class="cls-2" d="M376.044,36.535,376,36.511a.781.781,0,1,0-.819,1.331l.039.024a.781.781,0,0,0,.819-1.331Z" transform="translate(-374.814 -36.395)"/>
+        </g>
+      </g>
+      <g id="Group_101" data-name="Group 101" transform="translate(0.037 0)">
+        <g id="Group_100" data-name="Group 100" transform="translate(0)">
+          <path id="Path_46" data-name="Path 46" class="cls-2" d="M27.923,1.619A20,20,0,0,0,3.686,31.52L2.244,32.961A.781.781,0,0,0,2.8,34.294h3.88a.781.781,0,0,0,.781-.781v-3.88a.781.781,0,0,0-1.333-.552L4.808,30.4a18.44,18.44,0,0,1,22.5-27.343.781.781,0,0,0,.616-1.436ZM5.9,31.52v1.213H4.683Z" transform="translate(-0.037 0)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

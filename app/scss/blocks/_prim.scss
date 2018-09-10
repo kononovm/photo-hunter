@@ -1,0 +1,51 @@
+.prim {
+	display: flex;
+	justify-content: space-between;
+	&__item {
+		width: 295px;
+		flex-shrink: 0;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		height: 600px;
+		color: #fff;
+		border-radius: 5px;
+		box-shadow: $shadow;
+		&--1 {
+			background: url('../img/p1.jpg') no-repeat;
+			background-size: cover;
+		}
+		&--2 {
+			background: url('../img/p2.jpg') no-repeat;
+			background-size: cover;
+		}
+		&--3 {
+			background: url('../img/p3.jpg') no-repeat;
+			background-size: cover;
+		}
+		&--4 {
+			background: url('../img/p4.jpg') no-repeat;
+			background-size: cover;
+		}
+	}
+	&__name {
+		font-size: 24px;
+		font-weight: 500;
+		position: relative;
+		padding-bottom: 10px;
+		&:before {
+			left: 0;
+			height: 2px;
+		}
+	}
+	&__text {
+		font-size: 16px;
+		padding-bottom: 0;
+	}
+	&__btn {
+		margin: 30px auto 0 auto;
+		width: 380px;
+		height: 80px;
+	}
+}

@@ -1,0 +1,146 @@
+.item-min {
+	width: 610px;
+	min-height: 400px;
+	background: #fff;
+	box-shadow: $shadow;
+	border-radius: 5px;
+	display: flex;
+	margin-bottom: 20px;
+	&__galery {
+		height: 240px;
+	}
+	&__img {
+		text-align: center;
+		width: 190px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-bottom: 20px;
+	}
+	&__name {
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 700;
+		padding: 14px;
+		border-bottom: 1px solid rgba(0,0,0, .1);
+		border-right: 1px solid rgba(0,0,0, .1);
+	}
+	&__prices {
+		position: relative;
+		z-index: 10;
+	}
+	.owl-nav {
+		top: calc(50% - 20px);
+		width: 100%;
+		position: absolute;
+		.owl-prev, .owl-next {
+			position: absolute;
+			i {
+				font-size: 40px;
+				color: rgba(0,0,0, .2);
+				&:hover {
+					color: $accent;
+					transition: .3s;
+				}
+			}
+		}
+		.owl-prev {
+			left: 0;
+		}
+		.owl-next {
+			right: 0;
+		}
+	}
+	&__text-item {
+		display: none;
+		transition: .4s;
+		&--active {
+			display: block;
+			transition: .4s;
+		}
+	}
+	&__content {
+		width: 420px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__head {
+		border-bottom: 1px solid rgba(0,0,0, .1);
+		height: 53px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 20px;
+	}
+	&__title {
+		font-size: 18px;
+	}
+	&__dotted {
+		position: relative;
+	}
+	&__footer {
+		display: flex;
+		align-items: center;
+		padding: 0 20px 20px 20px;
+		.btn--mini {
+			margin-right: 20px;
+		}
+	}
+	&__btn {
+		flex: 1;
+		&--mobile {
+			display: none;
+		}
+	}
+}
+
+
+.i-charter {
+	&__list {
+		margin: 20px;
+		padding-left: 0;
+		font-size: 16px;
+		li {
+			list-style-type: none;
+			border-bottom: 1px dashed rgba(0,0,0, .2);
+			margin: 10px 0;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	&__name {
+		min-width: 220px;
+		display: block;
+		opacity: .6;
+	}
+	&__text {
+		min-width: 120px;
+		display: block;
+	}
+}
+
+.i-desc {
+	padding: 20px 20px 0 20px;
+}
+
+.i-adv {
+	padding: 10px 20px 0 20px;
+	ul {
+		padding-left: 0;
+		li {
+			list-style-type: none;
+		}
+	}
+	&__name {
+		margin-bottom: 0;
+		font-weight: 700;
+		span {
+			background: $accent;
+			color: #fff;
+			padding: 5px 10px;
+			border-radius: 50%;
+			margin-right: 6px;
+		}
+	}
+}

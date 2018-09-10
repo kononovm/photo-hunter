@@ -1,0 +1,20 @@
+.line {
+	&:before {
+		content: '';
+		position: absolute;
+		width: 20px;
+		height: 1px;
+		left: calc(50% - 10px);
+		bottom: 0;
+	}
+	&--accent {
+		&:before {
+			background: $accent;
+		}
+	}
+	&--grey {
+		&:before {
+			background: rgba(0,0,0, .4);
+		}
+	}
+}

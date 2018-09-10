@@ -1,0 +1,28 @@
+.box {
+	margin-bottom: 20px;
+	background: #fff;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: $shadow;
+	&--small {
+		width: 400px;
+	}
+	&--big {
+		width: 820px;
+	}
+	&__text {
+		margin-bottom: 0;
+	}
+	&__name {
+		font-weight: 500;
+	}
+	&__img {
+		width: 80px;
+		flex-shrink: 0;
+	}
+	ul {
+		padding-left: 20px;
+	}
+}
