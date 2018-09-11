@@ -53,3 +53,42 @@
 		margin-bottom: 0;
 	}
 }
+
+@media only screen and (max-width : 1279px) {
+	.service {
+		&__row {
+			flex-direction: column;
+			width: auto;
+		}
+		&__item--big {
+			width: 100%;
+			background: #fff;
+			height: auto;
+			color: rgba(0,0,0,.87);
+		}
+		&__btn {
+			margin: 10px auto 0 auto;
+		}
+		.box__img {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.service {
+		&__wrap {
+			padding: 20px 0;
+		}
+		&__btn {
+			width: 280px;
+			margin-top: 0;
+		}
+		&__name {
+			font-size: 14px;
+		}
+		&__support {
+			display: none;
+		}
+	}
+}

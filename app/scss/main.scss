@@ -29,15 +29,11 @@ a, button, input {
 	outline: none;
 }
 
-p {
+ul, p {
 	font-size: 16px;
 }
 
-ul {
-	font-size: 16px;
-}
-
-.wrap {
+.wrap{
 	width: 1280px;
 	padding: 20px;
 	margin: 40px auto 0 auto;
@@ -70,6 +66,36 @@ h2 {
 	}
 	span {
 		color: $accent;
+	}
+}
+
+@media only screen and (max-width : 1279px) {
+	.wrap {
+		width: 740px;
+		margin: 20px auto 0 auto;
+	}
+	ul, p {
+		font-size: 14px;
+	}
+	h2 {
+		font-size: 22px;
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.wrap {
+		width: 320px;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	h2 {
+		font-size: 16px;
+		text-transform: uppercase;
+		margin: 0 0 20px 0;
+		padding-bottom: 0;
+		padding-bottom: 10px;
+		line-height: 1.4em;
 	}
 }
 

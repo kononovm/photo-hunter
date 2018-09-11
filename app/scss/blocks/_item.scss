@@ -1,11 +1,19 @@
 .item {
 	display: flex;
+	&__page {
+		width: 100%;
+	}
+	&__img-wrap {
+		width: 295px;
+		height: 390px;
+	}
 	&__img {
 		width: 295px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		margin-right: 20px;
+		flex-shrink: 0;
 	}
 	&__name {
 		text-transform: uppercase;
@@ -14,7 +22,8 @@
 	}
 	&__galery {
 		img {
-			max-width: 295px;
+			width: 295px;
+			height: 390px;
 		}
 		.owl-dots {
 			position: relative;

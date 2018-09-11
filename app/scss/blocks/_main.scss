@@ -2,13 +2,15 @@
 	background: url('../img/bg.jpg') no-repeat;
 	background-size: cover;
 	background-position: top center;
+	height: 100vh;
+	min-height: 880px;
 }
 .main {
 	width: 820px;
 	&__title {
 		color: #fff;
 		font-weight: 500;
-		font-size: 46px;
+		font-size: 42px;
 		text-shadow: 0 3px 6px rgba(0,0,0, .5);
 		margin-top: 0;
 	}
@@ -26,5 +28,68 @@
 		border-radius: 5px;
 		box-shadow: 0 1px 3px rgba(0,0,0, .4);
 		margin: 40px 0;
+	}
+	&__hidden-act {
+		display: none;
+	}
+}
+
+@media only screen and (max-width : 1279px) {
+	.main {
+		width: auto;
+		&__page {
+			height: auto;	
+			min-height: auto;
+		}
+		&__title {
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+		&__subtitle {
+			width: 400px;
+			font-size: 24px;
+			line-height: 1.3em;
+		}
+		&__form {
+			width: 400px;
+			margin: 0 0 20px 0;
+		}
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.main {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		&__page {
+			background: url('../img/bg-mobile.jpg') no-repeat;
+			background-size: cover;
+			background-position: center;
+			height: 480px;
+			display: flex;
+			flex-direction: column;
+		}
+		&__form {
+			display: none;
+		}
+		&__title {
+			font-size: 15px;
+			text-transform: uppercase;
+			text-shadow: none;
+		}
+		&__subtitle {
+			width: auto;
+			font-size: 14px;
+		}
+		&__hidden-act {
+			display: block;
+			width: 320px;
+			margin: 0 auto;
+			margin-top: auto;
+			padding: 20px;
+			text-align: center;
+			color: #fff;
+		}
 	}
 }

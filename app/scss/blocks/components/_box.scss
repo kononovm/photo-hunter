@@ -26,3 +26,22 @@
 		padding-left: 20px;
 	}
 }
+
+@media only screen and (max-width : 1279px) {
+	.box {
+		&--small {
+			width: 700px;
+		}
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.box {
+		&--small {
+			width: 320px;
+		}
+		&__img {
+			display: none;
+		}
+	}
+}

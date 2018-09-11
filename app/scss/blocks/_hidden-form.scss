@@ -36,3 +36,21 @@
 	background: rgba(0,0,0, .6);
 	color: #fff;
 }
+
+@media only screen and (max-width : 767px) {
+	.hidden-form {
+		&__head {
+			height: 180px;
+			background-position: center;
+			h4 {
+				font-size: 16px;
+				line-height: 1.5em;
+				text-transform: uppercase;
+				margin: 0;
+			}
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

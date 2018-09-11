@@ -9,8 +9,8 @@
 		width: 400px;
 		flex-shrink: 0;
 		margin-right: 20px;
-		img {
-			max-width: 100%;
+		&--mobile {
+			display: none;
 		}
 	}
 	&__content {
@@ -25,5 +25,48 @@
 	&__form {
 		max-width: 400px;
 		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width : 1279px) {
+	.consult {
+		&__text {
+			display: none;
+		}
+		&__content {
+			width: 400px;
+		}
+		&__img {
+			width: 300px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.consult {
+		flex-direction: column;
+		margin-bottom: 0;
+		&__wrap {
+			padding: 20px 0;
+			margin-top: 20px;
+		}
+		&__content {
+			width: auto;
+		}
+		&__img {
+			margin-bottom: 20px;
+			width: 320px;
+			margin-right: 0;
+			&--desctop {
+				display: none;
+			}
+			&--mobile {
+				display: block;
+				width: 320px;
+			}
+		}
 	}
 }

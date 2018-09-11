@@ -70,15 +70,15 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 			<a href="#prim" class="scroll line line--accent">Сферы применения</a>
 			<a href="#cat" class="scroll line line--accent">Каталог</a>
 			<a href="#service" class="scroll line line--accent">Сервис</a>
-			<a href="#dev" class="scroll line line--accent">Доставка</a>
+			<a href="#deliv" class="scroll line line--accent">Доставка</a>
 			<a href="#pay" class="scroll line line--accent">Оплата</a>
-			<a href="#cont" class="scroll line line--accent">Контакты</a>
+			<a href="#contacts" class="scroll line line--accent">Контакты</a>
 		</nav>
 
 
         <div class="header__right">
         
-            <a href="https://wa.me/79990342210" class="header__wts">
+            <a href="https://wa.me/79990342210" class="header__wts" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 27.963 27.963">
                   <g id="whatsapp" transform="translate(0 0)">
                     <path id="WhatsApp-2" data-name="WhatsApp" class="cls-1" d="M27.963,13.621A13.75,13.75,0,0,1,7.6,25.548L0,27.963l2.478-7.308a13.478,13.478,0,0,1-1.97-7.033,13.728,13.728,0,0,1,27.455,0ZM14.236,2.169A11.51,11.51,0,0,0,2.694,13.621a11.332,11.332,0,0,0,2.2,6.714L3.451,24.589l4.435-1.41a11.553,11.553,0,0,0,17.891-9.557A11.511,11.511,0,0,0,14.236,2.169Zm6.932,14.589c-.085-.139-.309-.223-.645-.39s-1.992-.975-2.3-1.086-.533-.167-.757.167S16.6,16.536,16.4,16.758s-.392.251-.729.084a9.21,9.21,0,0,1-2.706-1.657,10.066,10.066,0,0,1-1.872-2.312c-.2-.334-.021-.515.148-.681.152-.15.337-.39.5-.585a2.238,2.238,0,0,0,.336-.557.608.608,0,0,0-.028-.585c-.084-.167-.757-1.81-1.038-2.478s-.56-.557-.757-.557S9.839,7.4,9.615,7.4a1.242,1.242,0,0,0-.9.418A3.733,3.733,0,0,0,7.54,10.605a6.46,6.46,0,0,0,1.374,3.453c.168.222,2.327,3.7,5.748,5.04s3.421.89,4.038.835a3.4,3.4,0,0,0,2.272-1.587A2.783,2.783,0,0,0,21.168,16.758Z"/>
@@ -90,10 +90,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
                 <span>Бесплатно по России</span>
             </a>
             <a href="tel:88005552739" class="header__phone--hidden">
-                <i class="material-icons">add</i>
-            </a>
-            <a href="#" class="header__menu">
-                <i class="material-icons">add</i>
+                <i class="material-icons">phone</i>
             </a>
 
         </div>
@@ -102,27 +99,27 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
 	<div class="main__wrap wrap">
 		<div class="main">
-			<h1 class="main__title">Стань профессиональным охотником и находи в 7 раз больше добычи</h1>
-			<p class="main__subtitle">Фотоловушки Филин помогут стать лучшим среди друзей</p>
+			<h1 class="main__title">Фотоловушки для охоты и охраны</h1>
+			<p class="main__subtitle">C оповещением по MMS и 3G и гарантией 12 месяцев</p>
 			<div class="main__form form">
 				<p class="form__name">Оставьте заявку</p>
 				<p class="form__desc line line--accent">И наш специалист по фотолувушкам бесплатно поможет вам в выборе</p>
 
 				<form action="/send_new.php" method="post">
-                    <div class="form__input" data-target='form-head-name'>
+                    <div class="form__input">
                         <i class="material-icons">person</i>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="form-head-name">
+                            <input class="mdl-textfield__input" type="text" name="name" id="form-head-name">
                             <label class="mdl-textfield__label" for="form-head-name">Введите имя...</label>
                         </div>
                     </div>
                     
-                    <div class="form__input"  data-target='form-head-phone'>
+                    <div class="form__input">
                         <i class="material-icons">phone</i>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-head-phone">
-                            <label class="mdl-textfield__label" for="form-head-phone">Введите имя...</label>
-                            <span class="mdl-textfield__error">Input is not a number!</span>
+                            <input class="mdl-textfield__input" type="text" name="phone" pattern="-?[0-9]*(\.[0-9]+)?" id="form-head-phone">
+                            <label class="mdl-textfield__label" for="form-head-phone">Введите номер телефона...</label>
+                            <span class="mdl-textfield__error">Только цифры!</span>
                         </div>
                     </div>
 
@@ -133,13 +130,17 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 					<input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
 					<input type="hidden" name='product_title' class="product_title" value="">
 
-					<button class="btn btn--accent form__btn pulse">Оставить заявку</button>
+					<button class="btn btn--accent form__btn pulse">Получить консультацию</button>
 
 				</form>
 				
 			</div>
 		</div>
 	</div>
+    <div class="main__hidden-act">
+        <p>Получите бесплатную консультацию специалиста по фотоловушкам</p>
+        <a class="btn btn--accent pulse" data-fancybox data-src="#hidden-form__question" href="javascript:;">Получить кунсультацию</a>
+    </div>
 
 </section>
 
@@ -156,7 +157,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
         </div>
         <div class="desc__content">
             <p class="desc__text">
-                <b>Фотоловушки</b> - это высокотехнологичное современное оборудование, предназначенное для наблюдения за определённой зоной и автоматического фото и видео фиксирования всего происходящего. С помощью тонких настроек камеры, можно четко отрегулировать фотоловушку под любые нужды: для охоты, охраны дома, охраны рабочего помещения или пасеки. Также вы сможете использовать данный гаджет для любительского наблюдения/ съёмки животных. Фотоловушка делает высококачественные снимки (до 16 Mpix) и записывает видеоролики (в том числе и ночью, благодаря встроенной ИК-подсветке в невидимом спектре), сохраняя всё на SD-карту. А с помощью функции ММС и 3G фотоловушка мгновенно отправляет снятое на телефон или e-mail. Влагозащищенный корпус и камуфлированная окраска позволяют вешать камеру даже в лесу и оставлять там на длительное время.
+                <b>Фотоловушки</b> - это высокотехнологичное современное оборудование, предназначенное для наблюдения за определённой зоной и автоматического фото и видео фиксирования всего происходящего. С помощью тонких настроек камеры, можно четко отрегулировать фотоловушку под любые нужды: для охоты, охраны дома, охраны рабочего помещения или пасеки. <span class="desc__hidden-text">Также вы сможете использовать данный гаджет для любительского наблюдения/ съёмки животных. Фотоловушка делает высококачественные снимки (до 16 Mpix) и записывает видеоролики (в том числе и ночью, благодаря встроенной ИК-подсветке в невидимом спектре), сохраняя всё на SD-карту. А с помощью функции ММС и 3G фотоловушка мгновенно отправляет снятое на телефон или e-mail. Влагозащищенный корпус и камуфлированная окраска позволяют вешать камеру даже в лесу и оставлять там на длительное время.</span>
             </p>
             <div class="desc__action">
                 <div class="desc__utp">
@@ -218,18 +219,26 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
             <div class="item-min__img">
                 <p class="item-min__name">Филин Mini</p>
                 <div class="item-min__galery owl-carousel">
-                    <a href="img/items/item1_1@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
-                        <img src="img/items/item1_1.png" alt="Филин Mini">
-                    </a>
-                    <a href="img/items/item1_2@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
-                        <img src="img/items/item1_2.png" alt="Филин Mini">
-                    </a>
-                    <a href="img/items/item1_3@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
-                        <img src="img/items/item1_3.png" alt="Филин Mini">
-                    </a>
-                    <a href="img/items/item1_4@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
-                        <img src="img/items/item1_4.png" alt="Филин Mini">
-                    </a>
+                    <div class="item-min__img-wrap">
+                        <a href="img/items/item1_1@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                            <img src="img/items/item1_1.png" alt="Филин Mini">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">
+                        <a href="img/items/item1_2@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                            <img src="img/items/item1_2.png" alt="Филин Mini">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">
+                        <a href="img/items/item1_3@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                            <img src="img/items/item1_3.png" alt="Филин Mini">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                    
+                        <a href="img/items/item1_4@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
+                            <img src="img/items/item1_4.png" alt="Филин Mini">
+                        </a>
+                    </div>                  
                 </div>
                 <div class="item-min__prices price-sm">
                     <p class="price-sm__new">4 890 ₽</p>
@@ -292,7 +301,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
                 <div class="item-min__footer">
                     <a data-fancybox data-src="#hidden-form__buy" data-product="Филин Mini" data-pprice="4890" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
-                    <a href="#mini" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#mini" href="javascript:;" class="btn btn--other item-min__btn item-min__btn--desctop">Подробнее</a>
                     <a data-fancybox data-src="#hidden-form__more" data-product="Филин Mini" data-pprice="4890" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
                 </div>
 
@@ -308,18 +317,26 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
             <div class="item-min__img">
                 <p class="item-min__name">Филин 120</p>
                 <div class="item-min__galery owl-carousel">
-                    <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120">
-                        <img src="img/items/item2_1.png" alt="Филин 120">
-                    </a>
-                    <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120">
-                        <img src="img/items/item2_2.png" alt="Филин 120">
-                    </a>
-                    <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120">
-                        <img src="img/items/item2_3.png" alt="Филин 120">
-                    </a>
-                    <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120">
-                        <img src="img/items/item2_4.png" alt="Филин 120">
-                    </a>
+                    <div class="item-min__img-wrap">                    
+                        <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                            <img src="img/items/item2_1.png" alt="Филин 120">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                            <img src="img/items/item2_2.png" alt="Филин 120">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                            <img src="img/items/item2_3.png" alt="Филин 120">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120">
+                            <img src="img/items/item2_4.png" alt="Филин 120">
+                        </a>
+                    </div>                        
                 </div>
                 <div class="item-min__prices price-sm">
                     <p class="price-sm__new">5 890 ₽</p>
@@ -382,7 +399,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
                 <div class="item-min__footer">
                     <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 120" data-pprice="5890" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
-                    <a href="#120" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#120" href="javascript:;" class="btn btn--other item-min__btn item-min__btn--desctop">Подробнее</a>
                     <a data-fancybox data-src="#hidden-form__more" data-product="Филин 120" data-pprice="5890" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
                 </div>
 
@@ -398,18 +415,26 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
             <div class="item-min__img">
                 <p class="item-min__name">Филин 120 MMS</p>
                 <div class="item-min__galery owl-carousel">
-                    <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
-                        <img src="img/items/item2_2.png" alt="Филин 120 MMS">
-                    </a>
-                    <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
-                        <img src="img/items/item2_3.png" alt="Филин 120 MMS">
-                    </a>
-                    <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
-                        <img src="img/items/item2_4.png" alt="Филин 120 MMS">
-                    </a>
-                    <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
-                        <img src="img/items/item2_1.png" alt="Филин 120 MMS">
-                    </a>
+                    <div class="item-min__img-wrap">                    
+                        <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                            <img src="img/items/item2_2.png" alt="Филин 120 MMS">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                            <img src="img/items/item2_3.png" alt="Филин 120 MMS">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                            <img src="img/items/item2_4.png" alt="Филин 120 MMS">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
+                            <img src="img/items/item2_1.png" alt="Филин 120 MMS">
+                        </a>
+                    </div>                       
                 </div>
                 <div class="item-min__prices price-sm">
                     <p class="price-sm__new">7 490 ₽</p>
@@ -472,7 +497,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
                 <div class="item-min__footer">
                     <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 120 MMS" data-pprice="7490" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
-                    <a href="#120mms" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#120mms" href="javascript:;" class="btn btn--other item-min__btn item-min__btn--desctop">Подробнее</a>
                     <a data-fancybox data-src="#hidden-form__more" data-product="Филин 120 MMS" data-pprice="7490" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
                 </div>
 
@@ -487,19 +512,27 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
             <div class="item-min__img">
                 <p class="item-min__name">Филин 120 MMS/3G</p>
-                <div class="item-min__galery owl-carousel">
-                    <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
-                        <img src="img/items/item2_3.png" alt="Филин 120 MMS/3G">
-                    </a>
-                    <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
-                        <img src="img/items/item2_4.png" alt="Филин 120 MMS/3G">
-                    </a>
-                    <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
-                        <img src="img/items/item2_1.png" alt="Филин 120 MMS/3G">
-                    </a>
-                    <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
-                        <img src="img/items/item2_2.png" alt="Филин 120 MMS/3G">
-                    </a>
+                <div class="item-min__galery owl-carousel">                    
+                    <div class="item-min__img-wrap">                    
+                        <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
+                            <img src="img/items/item2_3.png" alt="Филин 120 MMS/3G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
+                            <img src="img/items/item2_4.png" alt="Филин 120 MMS/3G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
+                            <img src="img/items/item2_1.png" alt="Филин 120 MMS/3G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS/3G">
+                            <img src="img/items/item2_2.png" alt="Филин 120 MMS/3G">
+                        </a>
+                    </div>                        
                 </div>
                 <div class="item-min__prices price-sm">
                     <p class="price-sm__new">9 490 ₽</p>
@@ -562,7 +595,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
                 <div class="item-min__footer">
                     <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 120 MMS/3G" data-pprice="9490" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
-                    <a href="#120mms3g" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#120mms3g" href="javascript:;" class="btn btn--other item-min__btn item-min__btn--desctop">Подробнее</a>
                     <a data-fancybox data-src="#hidden-form__more" data-product="Филин 120 MMS/3G" data-pprice="9490" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
                 </div>
 
@@ -577,19 +610,27 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
             <div class="item-min__img">
                 <p class="item-min__name">Филин 120 SM 4G</p>
-                <div class="item-min__galery owl-carousel">
-                    <a href="img/items/item5_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
-                        <img src="img/items/item5_1.png" alt="Филин 120 SM 4G">
-                    </a>
-                    <a href="img/items/item5_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
-                        <img src="img/items/item5_2.png" alt="Филин 120 SM 4G">
-                    </a>
-                    <a href="img/items/item5_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
-                        <img src="img/items/item5_3.png" alt="Филин 120 SM 4G">
-                    </a>
-                    <a href="img/items/item5_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
-                        <img src="img/items/item5_4.png" alt="Филин 120 SM 4G">
-                    </a>
+                <div class="item-min__galery owl-carousel">                    
+                    <div class="item-min__img-wrap">
+                        <a href="img/items/item5_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
+                            <img src="img/items/item5_1.png" alt="Филин 120 SM 4G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item5_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
+                            <img src="img/items/item5_2.png" alt="Филин 120 SM 4G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item5_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
+                            <img src="img/items/item5_3.png" alt="Филин 120 SM 4G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item5_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
+                            <img src="img/items/item5_4.png" alt="Филин 120 SM 4G">
+                        </a>
+                    </div>                        
                 </div>
                 <div class="item-min__prices price-sm">
                     <p class="price-sm__new">19 990 ₽</p>
@@ -653,7 +694,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
                 <div class="item-min__footer">
                     <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 120 SM 4G" data-pprice="19990" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
-                    <a href="#120sm4g" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#120sm4g" href="javascript:;" class="btn btn--other item-min__btn item-min__btn--desctop">Подробнее</a>
                     <a data-fancybox data-src="#hidden-form__more" data-product="Филин 120 SM 4G" data-pprice="19990" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
                 </div>
 
@@ -669,18 +710,26 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
             <div class="item-min__img">
                 <p class="item-min__name">Филин PRO EDITION</p>
                 <div class="item-min__galery owl-carousel">
-                    <a href="img/items/item3_1@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
-                        <img src="img/items/item3_1.png" alt="Филин PRO EDITION">
-                    </a>
-                    <a href="img/items/item3_2@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
-                        <img src="img/items/item3_2.png" alt="Филин PRO EDITION">
-                    </a>
-                    <a href="img/items/item3_3@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
-                        <img src="img/items/item3_3.png" alt="Филин PRO EDITION">
-                    </a>
-                    <a href="img/items/item3_4@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
-                        <img src="img/items/item3_4.png" alt="Филин PRO EDITION">
-                    </a>
+                    <div class="item-min__img-wrap">                    
+                        <a href="img/items/item3_1@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
+                            <img src="img/items/item3_1.png" alt="Филин PRO EDITION">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item3_2@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
+                            <img src="img/items/item3_2.png" alt="Филин PRO EDITION">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item3_3@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
+                            <img src="img/items/item3_3.png" alt="Филин PRO EDITION">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item3_4@2x.jpg" data-fancybox="images" data-caption="Филин PRO EDITION">
+                            <img src="img/items/item3_4.png" alt="Филин PRO EDITION">
+                        </a>
+                    </div>                        
                 </div>
                 <div class="item-min__prices price-sm">
                     <p class="price-sm__new">10 490 ₽</p>
@@ -744,7 +793,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
                 <div class="item-min__footer">
                     <a data-fancybox data-src="#hidden-form__buy" data-product="Филин PRO EDITION" data-pprice="10490" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
-                    <a href="#proedition" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#proedition" href="javascript:;" class="btn btn--other item-min__btn item-min__btn--desctop scroll">Подробнее</a>
                     <a data-fancybox data-src="#hidden-form__more" data-product="Филин PRO EDITION" data-pprice="10490" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
                 </div>
 
@@ -760,18 +809,26 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
             <div class="item-min__img">
                 <p class="item-min__name">Филин 200</p>
                 <div class="item-min__galery owl-carousel">
-                    <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200">
-                        <img src="img/items/item4_1.png" alt="Филин 200">
-                    </a>
-                    <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200">
-                        <img src="img/items/item4_2.png" alt="Филин 200">
-                    </a>
-                    <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200">
-                        <img src="img/items/item4_3.png" alt="Филин 200">
-                    </a>
-                    <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200">
-                        <img src="img/items/item4_4.png" alt="Филин 200">
-                    </a>
+                    <div class="item-min__img-wrap">                    
+                        <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200">
+                            <img src="img/items/item4_1.png" alt="Филин 200">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200">
+                            <img src="img/items/item4_2.png" alt="Филин 200">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200">
+                            <img src="img/items/item4_3.png" alt="Филин 200">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200">
+                            <img src="img/items/item4_4.png" alt="Филин 200">
+                        </a>
+                    </div>                      
                 </div>
                 <div class="item-min__prices price-sm">
                     <p class="price-sm__new">8 490 ₽</p>
@@ -835,7 +892,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
                 <div class="item-min__footer">
                     <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 200" data-pprice="8490" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
-                    <a href="#200" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#200" href="javascript:;" class="btn btn--other item-min__btn item-min__btn--desctop scroll">Подробнее</a>
                     <a data-fancybox data-src="#hidden-form__more" data-product="Филин 200" data-pprice="8490" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
                 </div>
 
@@ -851,18 +908,26 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
             <div class="item-min__img">
                 <p class="item-min__name">Филин 200 MMS</p>
                 <div class="item-min__galery owl-carousel">
-                    <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
-                        <img src="img/items/item4_2.png" alt="Филин 200 MMS">
-                    </a>
-                    <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
-                        <img src="img/items/item4_3.png" alt="Филин 200 MMS">
-                    </a>
-                    <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
-                        <img src="img/items/item4_4.png" alt="Филин 200 MMS">
-                    </a>
-                    <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
-                        <img src="img/items/item4_1.png" alt="Филин 200 MMS">
-                    </a>
+                    <div class="item-min__img-wrap">                    
+                        <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                            <img src="img/items/item4_2.png" alt="Филин 200 MMS">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                            <img src="img/items/item4_3.png" alt="Филин 200 MMS">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                            <img src="img/items/item4_4.png" alt="Филин 200 MMS">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                            <img src="img/items/item4_1.png" alt="Филин 200 MMS">
+                        </a>
+                    </div>
                 </div>
                 <div class="item-min__prices price-sm">
                     <p class="price-sm__new">9 690 ₽</p>
@@ -899,7 +964,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
                                 <li><span class="i-charter__name">Подсветка</span><span class="i-charter__text">20 метров</span></li>
                                 <li><span class="i-charter__name">Угол обзора</span><span class="i-charter__text">120°</span></li>
                                 <li><span class="i-charter__name">В режиме ожидания</span><span class="i-charter__text">6 месяцев</span></li>
-                                <li><span class="i-charter__name">Отправка на E-Mail и Телефон</span><span class="i-charter__text">Есть</span></li>
+                                <li><span class="i-charter__name">Отправка на E-Mail</span><span class="i-charter__text">Есть</span></li>
                                 <li><span class="i-charter__name">Удаленное управление</span><span class="i-charter__text">Есть</span></li>
                                
                             </ul>
@@ -926,7 +991,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
                 <div class="item-min__footer">
                     <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 200 MMS" data-pprice="9690" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
-                    <a href="#200mms" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#200mms" href="javascript:;" class="btn btn--other item-min__btn item-min__btn--desctop scroll">Подробнее</a>
                     <a data-fancybox data-src="#hidden-form__more" data-product="Филин 200 MMS" data-pprice="9690" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
                 </div>
 
@@ -942,18 +1007,26 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
             <div class="item-min__img">
                 <p class="item-min__name">Филин 200 MMS/3G</p>
                 <div class="item-min__galery owl-carousel">
-                    <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
-                        <img src="img/items/item4_3.png" alt="Филин 200 MMS/3G">
-                    </a>
-                    <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
-                        <img src="img/items/item4_4.png" alt="Филин 200 MMS/3G">
-                    </a>
-                    <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
-                        <img src="img/items/item4_1.png" alt="Филин 200 MMS/3G">
-                    </a>
-                    <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
-                        <img src="img/items/item4_2.png" alt="Филин 200 MMS/3G">
-                    </a>
+                    <div class="item-min__img-wrap">                    
+                        <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
+                            <img src="img/items/item4_3.png" alt="Филин 200 MMS/3G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
+                            <img src="img/items/item4_4.png" alt="Филин 200 MMS/3G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
+                            <img src="img/items/item4_1.png" alt="Филин 200 MMS/3G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS/3G">
+                            <img src="img/items/item4_2.png" alt="Филин 200 MMS/3G">
+                        </a>
+                    </div>                       
                 </div>
                 <div class="item-min__prices price-sm">
                     <p class="price-sm__new">12 590 ₽</p>
@@ -1017,7 +1090,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
                 <div class="item-min__footer">
                     <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 200 MMS/3G" data-pprice="12590" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
-                    <a href="#200mms3g" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#200mms3g" href="javascript:;" class="btn btn--other item-min__btn item-min__btn--desctop scroll">Подробнее</a>
                     <a data-fancybox data-src="#hidden-form__more" data-product="Филин 200 MMS/3G" data-pprice="12590" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
                 </div>
 
@@ -1033,18 +1106,26 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
             <div class="item-min__img">
                 <p class="item-min__name">Филин 200 4G</p>
                 <div class="item-min__galery owl-carousel">
-                    <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
-                        <img src="img/items/item4_4.png" alt="Филин 200 4G">
-                    </a>
-                    <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
-                        <img src="img/items/item4_1.png" alt="Филин 200 4G">
-                    </a>
-                    <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
-                        <img src="img/items/item4_2.png" alt="Филин 200 4G">
-                    </a>
-                    <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
-                        <img src="img/items/item4_3.png" alt="Филин 200 4G">
-                    </a>
+                    <div class="item-min__img-wrap">                    
+                        <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
+                            <img src="img/items/item4_4.png" alt="Филин 200 4G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
+                            <img src="img/items/item4_1.png" alt="Филин 200 4G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
+                            <img src="img/items/item4_2.png" alt="Филин 200 4G">
+                        </a>
+                    </div>
+                    <div class="item-min__img-wrap">                        
+                        <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 4G">
+                            <img src="img/items/item4_3.png" alt="Филин 200 4G">
+                        </a>
+                    </div>                        
                 </div>
                 <div class="item-min__prices price-sm">
                     <p class="price-sm__new">16 490 ₽</p>
@@ -1108,7 +1189,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
                 <div class="item-min__footer">
                     <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 200 4G" data-pprice="16490" href="javascript:;" class="btn btn--mini item-min__btn">Заказать</a>
-                    <a href="#2004g" class="btn btn--other item-min__btn desctop scroll">Подробнее</a>
+                    <a data-fancybox data-src="#2004g" href="javascript:;" class="btn btn--other item-min__btn item-min__btn--desctop scroll">Подробнее</a>
                     <a data-fancybox data-src="#hidden-form__more" data-product="Филин 200 4G" data-pprice="16490" class="btn btn--other item-min__btn item-min__btn--mobile">Подробнее</a>
                 </div>
 
@@ -1124,29 +1205,29 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
 <!-- Филин Мини -->
 
-
-<section id="mini" class="item wrap">
+<div id="mini" class="item__page" style="display: none;">
+<section class="item wrap">
     
     <div class="item__img">
         <h2 class="item__name">Филин <span>Mini</span></h2>
 
         <div class="item__galery owl-carousel">
-            <div class="">
+            <div class="item__img-wrap">
                 <a href="img/items/item1_1@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
                     <img src="img/items/item1_1.png" alt="Филин Mini">
                 </a>
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item1_2@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
                     <img src="img/items/item1_2.png" alt="Филин Mini">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item1_3@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
                     <img src="img/items/item1_3.png" alt="Филин Mini">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item1_4@2x.jpg" data-fancybox="images" data-caption="Филин Mini">
                     <img src="img/items/item1_4.png" alt="Филин Mini">
                 </a>
@@ -1224,33 +1305,35 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
     </div>
 
 </section>
+</div>
 
 
 <!-- Филин 120 -->
 
 
-<section id="120" class="item wrap">
+<div id="120" class="item__page" style="display: none;">
+<section class="item wrap">
     
     <div class="item__img">
         <h2 class="item__name">Филин <span>120</span></h2>
 
         <div class="item__galery owl-carousel">
-            <div class="">
+            <div class="item__img-wrap">
                 <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120">
                     <img src="img/items/item2_1.png" alt="Филин 120">
                 </a>
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120">
                     <img src="img/items/item2_2.png" alt="Филин 120">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120">
                     <img src="img/items/item2_3.png" alt="Филин 120">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120">
                     <img src="img/items/item2_4.png" alt="Филин 120">
                 </a>
@@ -1331,33 +1414,35 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
     </div>
 
 </section>
+</div>
 
 
 <!-- Филин 120 MMS -->
 
 
-<section id="120mms" class="item wrap">
+<div id="120mms" class="item__page" style="display: none;">
+<section class="item wrap">
     
     <div class="item__img">
         <h2 class="item__name">Филин <span>120 MMS</span></h2>
 
         <div class="item__galery owl-carousel">
-            <div class="">
+            <div class="item__img-wrap">
                 <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
                     <img src="img/items/item2_2.png" alt="Филин 120 MMS">
                 </a>
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
                     <img src="img/items/item2_3.png" alt="Филин 120 MMS">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
                     <img src="img/items/item2_4.png" alt="Филин 120 MMS">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS">
                     <img src="img/items/item2_1.png" alt="Филин 120 MMS">
                 </a>
@@ -1438,33 +1523,35 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
     </div>
 
 </section>
+</div>
 
 
 <!-- Филин 120 MMS 3G -->
 
 
-<section id="120mms3g" class="item wrap">
+<div id="120mms3g" class="item__page" style="display: none;">
+<section class="item wrap">
     
     <div class="item__img">
         <h2 class="item__name">Филин <span>120 MMS 3G</span></h2>
 
         <div class="item__galery owl-carousel">
-            <div class="">
+            <div class="item__img-wrap">
                 <a href="img/items/item2_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS 3G">
                     <img src="img/items/item2_3.png" alt="Филин 120 MMS 3G">
                 </a>
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item2_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS 3G">
                     <img src="img/items/item2_4.png" alt="Филин 120 MMS 3G">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item2_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS 3G">
                     <img src="img/items/item2_1.png" alt="Филин 120 MMS 3G">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item2_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 MMS 3G">
                     <img src="img/items/item2_2.png" alt="Филин 120 MMS 3G">
                 </a>
@@ -1545,33 +1632,35 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
     </div>
 
 </section>
+</div>
 
 
 <!-- Филин 120 SM 4G -->
 
 
-<section id="120sm4g" class="item wrap">
+<div id="120sm4g" class="item__page" style="display: none;">
+<section class="item wrap">
     
     <div class="item__img">
         <h2 class="item__name">Филин <span>120 SM 4G</span></h2>
 
         <div class="item__galery owl-carousel">
-            <div class="">
+            <div class="item__img-wrap">
                 <a href="img/items/item5_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
                     <img src="img/items/item5_1.png" alt="Филин 120 SM 4G">
                 </a>
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item5_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
                     <img src="img/items/item5_2.png" alt="Филин 120 SM 4G">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item5_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
                     <img src="img/items/item5_3.png" alt="Филин 120 SM 4G">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item5_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 SM 4G">
                     <img src="img/items/item5_4.png" alt="Филин 120 SM 4G">
                 </a>
@@ -1652,33 +1741,36 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
     </div>
 
 </section>
+</div>
+
 
 
 <!-- Филин 120 Pro Edition -->
 
 
-<section id="proedition" class="item wrap">
+<div id="proedition" class="item__page" style="display: none;">
+<section class="item wrap">
     
     <div class="item__img">
         <h2 class="item__name">Филин <span>120 Pro Edition</span></h2>
 
         <div class="item__galery owl-carousel">
-            <div class="">
+            <div class="item__img-wrap">
                 <a href="img/items/item3_1@2x.jpg" data-fancybox="images" data-caption="Филин 120 Pro Edition">
                     <img src="img/items/item3_1.png" alt="Филин 120 Pro Edition">
                 </a>
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item3_2@2x.jpg" data-fancybox="images" data-caption="Филин 120 Pro Edition">
                     <img src="img/items/item3_2.png" alt="Филин 120 Pro Edition">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item3_3@2x.jpg" data-fancybox="images" data-caption="Филин 120 Pro Edition">
                     <img src="img/items/item3_3.png" alt="Филин 120 Pro Edition">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item3_4@2x.jpg" data-fancybox="images" data-caption="Филин 120 Pro Edition">
                     <img src="img/items/item3_4.png" alt="Филин 120 Pro Edition">
                 </a>
@@ -1759,33 +1851,35 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
     </div>
 
 </section>
+</div>
 
 
 <!-- Филин 200 -->
 
 
-<section id="proedition" class="item wrap">
+<div id="200" class="item__page" style="display: none;">
+<section class="item wrap">
     
     <div class="item__img">
         <h2 class="item__name">Филин <span>200</span></h2>
 
         <div class="item__galery owl-carousel">
-            <div class="">
+            <div class="item__img-wrap">
                 <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200">
                     <img src="img/items/item4_1.png" alt="Филин 200">
                 </a>
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200">
                     <img src="img/items/item4_2.png" alt="Филин 200">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200">
                     <img src="img/items/item4_3.png" alt="Филин 200">
                 </a>    
             </div>
-            <div>
+            <div class="item__img-wrap">
                 <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200">
                     <img src="img/items/item4_4.png" alt="Филин 200">
                 </a>
@@ -1866,6 +1960,338 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
     </div>
 
 </section>
+</div>
+
+
+<!-- Филин 200 MMS -->
+
+
+<div id="200mms" class="item__page" style="display: none;">
+<section class="item wrap">
+    
+    <div class="item__img">
+        <h2 class="item__name">Филин <span>200 MMS</span></h2>
+
+        <div class="item__galery owl-carousel">
+            <div class="item__img-wrap">
+                <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                    <img src="img/items/item4_2.png" alt="Филин 200 MMS">
+                </a>
+            </div>
+            <div class="item__img-wrap">
+                <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                    <img src="img/items/item4_3.png" alt="Филин 200 MMS">
+                </a>    
+            </div>
+            <div class="item__img-wrap">
+                <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                    <img src="img/items/item4_4.png" alt="Филин 200 MMS">
+                </a>    
+            </div>
+            <div class="item__img-wrap">
+                <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS">
+                    <img src="img/items/item4_1.png" alt="Филин 200 MMS">
+                </a>
+            </div>
+        </div>
+
+        <div class="item__prices price-big">
+            <div class="price-big__new">
+                <span class="price-big__desc">Цена сегодня</span>
+                <span class="price-big__numb">9 690 ₽</span>
+            </div>
+            <div class="price-big__old">
+                <span class="price-big__desc">Старая цена</span>
+                <span class="price-big__numb">13 680 ₽</span>
+            </div>
+        </div>
+
+        <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 200 MMS" data-pprice="9690" href="javascript:;" class="btn btn--accent item__btn">Заказать</a>
+    </div>
+
+    <div class="item__content">
+
+        <div class="item__adv">
+            <div class="item__head-item">
+                <p class="item__head-name"><span>1</span> Лимитированая линейка</p>
+                <p class="item__head-text">
+                    Ограниченная партия фотоловйшек, выпущенная в 2018 году.
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>2</span> Качественная матрица</p>
+                <p class="item__head-text">
+                    Имеет более качественную матрицу, что увеличивает качество съемки фото и видео, время срабатывания 0,3 секунд (вместо 0,7 секунд)
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>3</span> Длительная работа</p>
+                <p class="item__head-text">
+                    Время автономной работы увеличено до 6 месяцев, благодаря улучшенному и экономному энергопотреблению.
+                </p>
+            </div>
+        </div>
+
+        <div class="item__char-wrap">
+            <p class="item__char-name">Характеристики</p>
+            <div class="item__char">
+                <ul>
+                    <li><span class="item__char-t1">Отправка фото на телефон или e-mail:</span><span class="item__char-t2">Есть</span></li>
+                    <li><span class="item__char-t1">Рабочая температура</span><span class="item__char-t2">-30 - 70</span></li>
+                    <li><span class="item__char-t1">Размеры</span><span class="item__char-t2">9 × 14 × 6 см</span></li>
+                    <li><span class="item__char-t1">Тепловизор (датчик движения)</span><span class="item__char-t2">3 уровня</span></li>
+                    <li><span class="item__char-t1">Матрица</span><span class="item__char-t2">CMOS 16 Mpx</span></li>
+                    <li><span class="item__char-t1">Внешняя память</span><span class="item__char-t2">SD/SDHC до 32 Гб</span></li>
+                    <li><span class="item__char-t1">Активный режим ожидания</span><span class="item__char-t2">3 мес</span></li>
+                    <li><span class="item__char-t1">ИК-фильтр</span><span class="item__char-t2">42 шт.</span></li>
+                    <li><span class="item__char-t1">Время срабатывания</span><span class="item__char-t2">0,7 сек.</span></li>
+                </ul>
+                <ul>
+                    <li><span class="item__char-t1">Индикатор заряда батареи</span><span class="item__char-t2">Есть</span></li>                    
+                    <li><span class="item__char-t1">Формат видеосъемки</span><span class="item__char-t2">AVI, цветное</span></li>
+                    <li><span class="item__char-t1">Формат фотосъемки</span><span class="item__char-t2">JPEG, цветное</span></li>
+                    <li><span class="item__char-t1">Разрешение фото</span><span class="item__char-t2">4032×3024 px</span></li>
+                    <li><span class="item__char-t1">Разрешение видео</span><span class="item__char-t2">Full HD 1920×1080 px</span></li>
+                    <li><span class="item__char-t1">Периодичность снимков</span><span class="item__char-t2">от 1 сек. до 24 ч.</span></li>
+                    <li><span class="item__char-t1">Дисплей</span><span class="item__char-t2">2.5 ”</span></li>
+                    <li><span class="item__char-t1">Влагозащита</span><span class="item__char-t2">IP 64</span></li>    
+                    <li><span class="item__char-t1">Наложение даты и времени</span><span class="item__char-t2">Есть</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="item__desc">
+            <p class="item__char-name">Описание</p>
+            <p class="item__desc-text">
+                Лимитованная линейка фотоловушек "Филин 200" 2018 года, в отличие от моделей "Филин 120" имеет более качественную матрицу, что увеличивает качество съемки фото и видео, время срабатывания 0,3 секунд (вместо 0,7 секунд). Время автономной работы увеличено до 6 месяцев, благодаря улучшенному и экономному энергопотреблению. Влагозащищенный корпус IP65 обеспечивает стойкость микросхем. А дальность ночной съемки увеличилась до 30 метров.<br>
+                Большим преимуществом данной камеры является встренная панель управления. Теперь вам не нужно долго настраивать фотоловушку с компьютера, пульта. Достаточно ли открыть фотоловушку и задать настройки.
+            </p>
+        </div>
+    </div>
+
+</section>
+</div>
+
+
+
+<!-- Филин 200 MMS 3G -->
+
+
+<div id="200mms3g" class="item__page" style="display: none;">
+<section class="item wrap">
+    
+    <div class="item__img">
+        <h2 class="item__name">Филин <span>200 MMS 3G</span></h2>
+
+        <div class="item__galery owl-carousel">
+            <div class="item__img-wrap">
+                <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS 3G">
+                    <img src="img/items/item4_3.png" alt="Филин 200 MMS 3G">
+                </a>
+            </div>
+            <div class="item__img-wrap">
+                <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS 3G">
+                    <img src="img/items/item4_4.png" alt="Филин 200 MMS 3G">
+                </a>    
+            </div>
+            <div class="item__img-wrap">
+                <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS 3G">
+                    <img src="img/items/item4_1.png" alt="Филин 200 MMS 3G">
+                </a>    
+            </div>
+            <div class="item__img-wrap">
+                <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS 3G">
+                    <img src="img/items/item4_2.png" alt="Филин 200 MMS 3G">
+                </a>
+            </div>
+        </div>
+
+        <div class="item__prices price-big">
+            <div class="price-big__new">
+                <span class="price-big__desc">Цена сегодня</span>
+                <span class="price-big__numb">12 590 ₽</span>
+            </div>
+            <div class="price-big__old">
+                <span class="price-big__desc">Старая цена</span>
+                <span class="price-big__numb">15 180 ₽</span>
+            </div>
+        </div>
+
+        <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 200 MMS 3G" data-pprice="12590" href="javascript:;" class="btn btn--accent item__btn">Заказать</a>
+    </div>
+
+    <div class="item__content">
+
+        <div class="item__adv">
+            <div class="item__head-item">
+                <p class="item__head-name"><span>1</span> Лимитированая линейка</p>
+                <p class="item__head-text">
+                    Ограниченная партия фотоловйшек, выпущенная в 2018 году.
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>2</span> Автоматическая отправка сообщений</p>
+                <p class="item__head-text">
+                    Автоматически отправляет фото и видео файлы на любое устройство, соединенное с интернетом
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>3</span> Высокая скорость реагирования</p>
+                <p class="item__head-text">
+                    Фотоловушка обладает высокой скоростью реагирования на движение. Время срабатывания составляет всего 0,3 секунды.
+                </p>
+            </div>
+        </div>
+
+        <div class="item__char-wrap">
+            <p class="item__char-name">Характеристики</p>
+            <div class="item__char">
+                <ul>
+                    <li><span class="item__char-t1">Поддерска 3G:</span><span class="item__char-t2">Есть</span></li>
+                    <li><span class="item__char-t1">Рабочая температура</span><span class="item__char-t2">-30 - 70</span></li>
+                    <li><span class="item__char-t1">Размеры</span><span class="item__char-t2">9 × 14 × 6 см</span></li>
+                    <li><span class="item__char-t1">Тепловизор (датчик движения)</span><span class="item__char-t2">3 уровня</span></li>
+                    <li><span class="item__char-t1">Матрица</span><span class="item__char-t2">CMOS 16 Mpx</span></li>
+                    <li><span class="item__char-t1">Внешняя память</span><span class="item__char-t2">SD/SDHC до 32 Гб</span></li>
+                    <li><span class="item__char-t1">Активный режим ожидания</span><span class="item__char-t2">3 мес</span></li>
+                    <li><span class="item__char-t1">ИК-фильтр</span><span class="item__char-t2">42 шт.</span></li>
+                    <li><span class="item__char-t1">Время срабатывания</span><span class="item__char-t2">0,7 сек.</span></li>
+                </ul>
+                <ul>
+                    <li><span class="item__char-t1">Индикатор заряда батареи</span><span class="item__char-t2">Есть</span></li>                    
+                    <li><span class="item__char-t1">Формат видеосъемки</span><span class="item__char-t2">AVI, цветное</span></li>
+                    <li><span class="item__char-t1">Формат фотосъемки</span><span class="item__char-t2">JPEG, цветное</span></li>
+                    <li><span class="item__char-t1">Разрешение фото</span><span class="item__char-t2">4032×3024 px</span></li>
+                    <li><span class="item__char-t1">Разрешение видео</span><span class="item__char-t2">Full HD 1920×1080 px</span></li>
+                    <li><span class="item__char-t1">Периодичность снимков</span><span class="item__char-t2">от 1 сек. до 24 ч.</span></li>
+                    <li><span class="item__char-t1">Дисплей</span><span class="item__char-t2">2.5 ”</span></li>
+                    <li><span class="item__char-t1">Влагозащита</span><span class="item__char-t2">IP 64</span></li>    
+                    <li><span class="item__char-t1">Наложение даты и времени</span><span class="item__char-t2">Есть</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="item__desc">
+            <p class="item__char-name">Описание</p>
+            <p class="item__desc-text">
+                Лимитованная линейка фотоловушек "Филин 200" 2018 года, в отличие от моделей "Филин 120" имеет более качественную матрицу, что увеличивает качество съемки фото и видео, время срабатывания 0,3 секунд (вместо 0,7 секунд). Время автономной работы увеличено до 6 месяцев, благодаря улучшенному и экономному энергопотреблению. Влагозащищенный корпус IP65 обеспечивает стойкость микросхем. А дальность ночной съемки увеличилась до 30 метров.<br>
+                Большим преимуществом данной камеры является встренная панель управления. Теперь вам не нужно долго настраивать фотоловушку с компьютера, пульта. Достаточно ли открыть фотоловушку и задать настройки.
+            </p>
+        </div>
+    </div>
+
+</section>
+</div>
+
+
+<!-- Филин 200 MMS 4G -->
+
+
+<div id="2004g" class="item__page" style="display: none;">
+<section class="item wrap">
+    
+    <div class="item__img">
+        <h2 class="item__name">Филин <span>200 MMS 4G</span></h2>
+
+        <div class="item__galery owl-carousel">
+            <div class="item__img-wrap">
+                <a href="img/items/item4_1@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS 4G">
+                    <img src="img/items/item4_1.png" alt="Филин 200 MMS 4G">
+                </a>
+            </div>
+            <div class="item__img-wrap">
+                <a href="img/items/item4_4@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS 4G">
+                    <img src="img/items/item4_4.png" alt="Филин 200 MMS 4G">
+                </a>    
+            </div>
+            <div class="item__img-wrap">
+                <a href="img/items/item4_3@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS 4G">
+                    <img src="img/items/item4_3.png" alt="Филин 200 MMS 4G">
+                </a>    
+            </div>
+            <div class="item__img-wrap">
+                <a href="img/items/item4_2@2x.jpg" data-fancybox="images" data-caption="Филин 200 MMS 4G">
+                    <img src="img/items/item4_2.png" alt="Филин 200 MMS 4G">
+                </a>
+            </div>
+        </div>
+
+        <div class="item__prices price-big">
+            <div class="price-big__new">
+                <span class="price-big__desc">Цена сегодня</span>
+                <span class="price-big__numb">16 490 ₽</span>
+            </div>
+            <div class="price-big__old">
+                <span class="price-big__desc">Старая цена</span>
+                <span class="price-big__numb">26 230 ₽</span>
+            </div>
+        </div>
+
+        <a data-fancybox data-src="#hidden-form__buy" data-product="Филин 200 MMS 4G" data-pprice="16490" href="javascript:;" class="btn btn--accent item__btn">Заказать</a>
+    </div>
+
+    <div class="item__content">
+
+        <div class="item__adv">
+            <div class="item__head-item">
+                <p class="item__head-name"><span>1</span> Лимитированая линейка</p>
+                <p class="item__head-text">
+                    Ограниченная партия фотоловйшек, выпущенная в 2018 году.
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>2</span> Автоматическая отправка сообщений</p>
+                <p class="item__head-text">
+                    Автоматически отправляет фото и видео файлы на любое устройство, соединенное с интернетом
+                </p>
+            </div>
+            <div class="item__head-item">
+                <p class="item__head-name"><span>3</span> Высокая скорость отправки</p>
+                <p class="item__head-text">
+                    Отправляет данные в 100 раз быстрее, благодаря высокоскоростному 4G соединению
+                </p>
+            </div>
+        </div>
+
+        <div class="item__char-wrap">
+            <p class="item__char-name">Характеристики</p>
+            <div class="item__char">
+                <ul>
+                    <li><span class="item__char-t1">Поддерска 4G:</span><span class="item__char-t2">Есть</span></li>
+                    <li><span class="item__char-t1">Рабочая температура</span><span class="item__char-t2">-30 - 70</span></li>
+                    <li><span class="item__char-t1">Размеры</span><span class="item__char-t2">9 × 14 × 6 см</span></li>
+                    <li><span class="item__char-t1">Тепловизор (датчик движения)</span><span class="item__char-t2">3 уровня</span></li>
+                    <li><span class="item__char-t1">Матрица</span><span class="item__char-t2">CMOS 16 Mpx</span></li>
+                    <li><span class="item__char-t1">Внешняя память</span><span class="item__char-t2">SD/SDHC до 32 Гб</span></li>
+                    <li><span class="item__char-t1">Активный режим ожидания</span><span class="item__char-t2">3 мес</span></li>
+                    <li><span class="item__char-t1">ИК-фильтр</span><span class="item__char-t2">42 шт.</span></li>
+                    <li><span class="item__char-t1">Время срабатывания</span><span class="item__char-t2">0,7 сек.</span></li>
+                </ul>
+                <ul>
+                    <li><span class="item__char-t1">Индикатор заряда батареи</span><span class="item__char-t2">Есть</span></li>                    
+                    <li><span class="item__char-t1">Формат видеосъемки</span><span class="item__char-t2">AVI, цветное</span></li>
+                    <li><span class="item__char-t1">Формат фотосъемки</span><span class="item__char-t2">JPEG, цветное</span></li>
+                    <li><span class="item__char-t1">Разрешение фото</span><span class="item__char-t2">4032×3024 px</span></li>
+                    <li><span class="item__char-t1">Разрешение видео</span><span class="item__char-t2">Full HD 1920×1080 px</span></li>
+                    <li><span class="item__char-t1">Периодичность снимков</span><span class="item__char-t2">от 1 сек. до 24 ч.</span></li>
+                    <li><span class="item__char-t1">Дисплей</span><span class="item__char-t2">2.5 ”</span></li>
+                    <li><span class="item__char-t1">Влагозащита</span><span class="item__char-t2">IP 64</span></li>    
+                    <li><span class="item__char-t1">Наложение даты и времени</span><span class="item__char-t2">Есть</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="item__desc">
+            <p class="item__char-name">Описание</p>
+            <p class="item__desc-text">
+                Лимитованная линейка фотоловушек "Филин 200" 2018 года, в отличие от моделей "Филин 120" имеет более качественную матрицу, что увеличивает качество съемки фото и видео, время срабатывания 0,3 секунд (вместо 0,7 секунд). Время автономной работы увеличено до 6 месяцев, благодаря улучшенному и экономному энергопотреблению. Влагозащищенный корпус IP65 обеспечивает стойкость микросхем. А дальность ночной съемки увеличилась до 30 метров.<br>
+                Большим преимуществом данной камеры является встренная панель управления. Теперь вам не нужно долго настраивать фотоловушку с компьютера, пульта. Достаточно ли открыть фотоловушку и задать настройки.
+            </p>
+        </div>
+    </div>
+
+</section>
+</div>
 
 
 <!-- Аксессуары -->
@@ -1948,7 +2374,8 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
     <div class="consult">
         
         <div class="consult__img">
-            <img src="img/expert.jpg" alt="Эксперт">
+            <img class="consult__img--desctop" src="img/expert.jpg" alt="Эксперт">
+            <img class="consult__img--mobile" src="img/expert-mob.jpg" alt="Эксперт">
         </div>
 
         <div class="consult__content">
@@ -1962,19 +2389,19 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
                 <p class="form__desc line line--accent">И наш специалист по фотолувушкам бесплатно поможет вам в выборе</p>
 
                 <form action="/send_new.php" method="post">
-                    <div class="form__input" data-target='form-body-name'>
+                    <div class="form__input">
                         <i class="material-icons">person</i>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="form-body-name">
+                            <input class="mdl-textfield__input" name="name" type="text" id="form-body-name">
                             <label class="mdl-textfield__label" for="form-body-name">Введите имя...</label>
                         </div>
                     </div>
                     
-                    <div class="form__input"  data-target='form-body-phone'>
+                    <div class="form__input">
                         <i class="material-icons">phone</i>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-body-phone">
-                            <label class="mdl-textfield__label" for="form-body-phone">Введите имя...</label>
+                            <input class="mdl-textfield__input" name="phone" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-body-phone">
+                            <label class="mdl-textfield__label" for="form-body-phone">Введите номер телефона...</label>
                             <span class="mdl-textfield__error">Input is not a number!</span>
                         </div>
                     </div>
@@ -2176,7 +2603,7 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
 
 
 <section class="pay__wrap wrap" id="pay">
-    <h2 class="pay__title">Оплата</h2>
+    <h2 class="pay__title">Удобные <span>способы оплаты</span></h2>
 
     <div class="pay">
 
@@ -2233,7 +2660,8 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
     <div class="consult">
         
         <div class="consult__img">
-            <img src="img/expert.jpg" alt="Эксперт">
+            <img class="consult__img--desctop" src="img/expert.jpg" alt="Эксперт">
+            <img class="consult__img--mobile" src="img/expert-mob.jpg" alt="Эксперт">
         </div>
 
         <div class="consult__content">
@@ -2247,25 +2675,25 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
                 <p class="form__desc line line--accent">И наш специалист по фотолувушкам бесплатно поможет вам в выборе</p>
 
                 <form action="/send_new.php" method="post">
-                    <div class="form__input" data-target='form-footer-name'>
+                    <div class="form__input">
                         <i class="material-icons">person</i>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="form-footer-name">
-                            <label class="mdl-textfield__label" for="form-footer-name">Введите имя...</label>
+                            <input class="mdl-textfield__input" name="name" type="text" id="form-body-name">
+                            <label class="mdl-textfield__label" for="form-body-name">Введите имя...</label>
                         </div>
                     </div>
                     
-                    <div class="form__input"  data-target='form-footer-phone'>
+                    <div class="form__input">
                         <i class="material-icons">phone</i>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-footer-phone">
-                            <label class="mdl-textfield__label" for="form-footer-phone">Введите имя...</label>
-                            <span class="mdl-textfield__error">Input is not a number!</span>
+                            <input class="mdl-textfield__input" name="phone" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-body-phone">
+                            <label class="mdl-textfield__label" for="form-body-phone">Введите номер телефона...</label>
+                            <span class="mdl-textfield__error">Только цифры!</span>
                         </div>
                     </div>
 
                     <input type="hidden" name='variant' value="first" >
-                    <input type="hidden" name="type" value="header">
+                    <input type="hidden" name="type" value="footer">
                     <input type="hidden" name='landing' value="Фотоловушки Осн." >
                     <input type="hidden" name='category_title' value="Консультация">
                     <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
@@ -2332,31 +2760,31 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
         <div class="hidden-form__body">
 
             <form action="/send_new.php" method="post">
-                <div class="form__input" data-target='form-hidden1-name'>
+                <div class="form__input">
                     <i class="material-icons">person</i>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="form-hidden1-name">
+                        <input class="mdl-textfield__input" name="name" type="text" id="form-hidden1-name">
                         <label class="mdl-textfield__label" for="form-hidden1-name">Введите имя...</label>
                     </div>
                 </div>
                 
-                <div class="form__input"  data-target='form-hidden1-phone'>
+                <div class="form__input">
                     <i class="material-icons">phone</i>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden1-phone">
-                        <label class="mdl-textfield__label" for="form-hidden1-phone">Введите имя...</label>
-                        <span class="mdl-textfield__error">Input is not a number!</span>
+                        <input class="mdl-textfield__input" name="phone" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden1-phone">
+                        <label class="mdl-textfield__label" for="form-hidden1-phone">Введите номер телефона...</label>
+                        <span class="mdl-textfield__error">Только цифры</span>
                     </div>
                 </div>
 
                 <input type="hidden" name='variant' value="first" >
                 <input type="hidden" name="type" value="header">
                 <input type="hidden" name='landing' value="Фотоловушки Осн." >
-                <input type="hidden" name='category_title' value="Консультация">
+                <input type="hidden" name='category_title' value="Купить">
                 <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
                 <input type="hidden" name='product_title' class="product_title" value="">
 
-                <button class="btn btn--accent form__btn pulse">Оставить заявку</button>
+                <button class="btn btn--accent form__btn">Заказать</button>
 
             </form>
 
@@ -2377,31 +2805,31 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
         <div class="hidden-form__body">
 
             <form action="/send_new.php" method="post">
-                <div class="form__input" data-target='form-hidden1-name'>
+                <div class="form__input">
                     <i class="material-icons">person</i>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="form-hidden1-name">
-                        <label class="mdl-textfield__label" for="form-hidden1-name">Введите имя...</label>
+                        <input class="mdl-textfield__input" type="text" name="name" id="form-hidden2-name">
+                        <label class="mdl-textfield__label" for="form-hidden2-name">Введите имя...</label>
                     </div>
                 </div>
                 
-                <div class="form__input"  data-target='form-hidden1-phone'>
+                <div class="form__input">
                     <i class="material-icons">phone</i>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden1-phone">
-                        <label class="mdl-textfield__label" for="form-hidden1-phone">Введите имя...</label>
-                        <span class="mdl-textfield__error">Input is not a number!</span>
+                        <input class="mdl-textfield__input" name="phone" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden2-phone">
+                        <label class="mdl-textfield__label" for="form-hidden2-phone">Введите номер телефона...</label>
+                        <span class="mdl-textfield__error">Только цифры!</span>
                     </div>
                 </div>
 
                 <input type="hidden" name='variant' value="first" >
                 <input type="hidden" name="type" value="header">
                 <input type="hidden" name='landing' value="Фотоловушки Осн." >
-                <input type="hidden" name='category_title' value="Консультация">
+                <input type="hidden" name='category_title' value="Купить">
                 <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
                 <input type="hidden" name='product_title' class="product_title" value="">
 
-                <button class="btn btn--accent form__btn pulse">Оставить заявку</button>
+                <button class="btn btn--accent form__btn">Оставить заявку</button>
 
             </form>
 
@@ -2421,34 +2849,38 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
         </div>
         <div class="hidden-form__body">
 
+            <div class="form">
+
             <form action="/send_new.php" method="post">
-                <div class="form__input" data-target='form-hidden1-name'>
+                <div class="form__input">
                     <i class="material-icons">person</i>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="form-hidden1-name">
-                        <label class="mdl-textfield__label" for="form-hidden1-name">Введите имя...</label>
+                        <input class="mdl-textfield__input" type="email" name="email" id="form-hidden3-name">
+                        <label class="mdl-textfield__label" for="form-hidden3-name">Введите E-Mail...</label>
                     </div>
                 </div>
                 
-                <div class="form__input"  data-target='form-hidden1-phone'>
+                <div class="form__input">
                     <i class="material-icons">phone</i>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden1-phone">
-                        <label class="mdl-textfield__label" for="form-hidden1-phone">Введите имя...</label>
-                        <span class="mdl-textfield__error">Input is not a number!</span>
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden3-phone">
+                        <label class="mdl-textfield__label" for="form-hidden3-phone">Введите номер телефона...</label>
+                        <span class="mdl-textfield__error">Только цифры!</span>
                     </div>
                 </div>
 
                 <input type="hidden" name='variant' value="first" >
                 <input type="hidden" name="type" value="header">
                 <input type="hidden" name='landing' value="Фотоловушки Осн." >
-                <input type="hidden" name='category_title' value="Консультация">
+                <input type="hidden" name='category_title' value="Скачать">
                 <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
                 <input type="hidden" name='product_title' class="product_title" value="">
 
-                <button class="btn btn--accent form__btn pulse">Оставить заявку</button>
+                <button class="btn btn--accent form__btn">Скачать бесплатно</button>
 
             </form>
+
+            </div>
 
         </div>
     </div>
@@ -2467,20 +2899,20 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
         <div class="hidden-form__body">
 
             <form action="/send_new.php" method="post">
-                <div class="form__input" data-target='form-hidden1-name'>
+                <div class="form__input">
                     <i class="material-icons">person</i>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="form-hidden1-name">
-                        <label class="mdl-textfield__label" for="form-hidden1-name">Введите имя...</label>
+                        <input class="mdl-textfield__input" type="text" name="name" id="form-hidden4-name">
+                        <label class="mdl-textfield__label" for="form-hidden4-name">Введите имя...</label>
                     </div>
                 </div>
                 
-                <div class="form__input"  data-target='form-hidden1-phone'>
+                <div class="form__input">
                     <i class="material-icons">phone</i>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden1-phone">
-                        <label class="mdl-textfield__label" for="form-hidden1-phone">Введите имя...</label>
-                        <span class="mdl-textfield__error">Input is not a number!</span>
+                        <input class="mdl-textfield__input" type="text" name="phone" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden4-phone">
+                        <label class="mdl-textfield__label" for="form-hidden4-phone">Введите номер телефона...</label>
+                        <span class="mdl-textfield__error">Только цифры!</span>
                     </div>
                 </div>
 
@@ -2491,7 +2923,52 @@ data-fancybox data-src="#hidden-form1" data-product="Заявка с УТП" dat
                 <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
                 <input type="hidden" name='product_title' class="product_title" value="">
 
-                <button class="btn btn--accent form__btn pulse">Получить консультацию</button>
+                <button class="btn btn--accent form__btn">Получить консультацию</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Консультация -->
+
+
+<div id="hidden-form__more" class="hidden-form__wrap" style="display: none;">
+    <div class="hidden-form">
+        <div class="hidden-form__head hidden-form__head--question">
+            <h4>Оставьте заявку</h4>
+            <p>Для получения подробной информации о товаре.</p>
+        </div>
+        <div class="hidden-form__body">
+
+            <form action="/send_new.php" method="post">
+                <div class="form__input">
+                    <i class="material-icons">person</i>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="name" id="form-hidden5-name">
+                        <label class="mdl-textfield__label" for="form-hidden5-name">Введите имя...</label>
+                    </div>
+                </div>
+                
+                <div class="form__input">
+                    <i class="material-icons">phone</i>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="phone" pattern="-?[0-9]*(\.[0-9]+)?" id="form-hidden5-phone">
+                        <label class="mdl-textfield__label" for="form-hidden5-phone">Введите номер телефона...</label>
+                        <span class="mdl-textfield__error">Только цифры!</span>
+                    </div>
+                </div>
+
+                <input type="hidden" name='variant' value="first" >
+                <input type="hidden" name="type" value="header">
+                <input type="hidden" name='landing' value="Фотоловушки Осн." >
+                <input type="hidden" name='category_title' value="Консультация">
+                <input type="hidden" name='_csrf' value="<?=csrf::setToken()?>">
+                <input type="hidden" name='product_title' class="product_title" value="">
+
+                <button class="btn btn--accent form__btn">Узнать подробности</button>
 
             </form>
 

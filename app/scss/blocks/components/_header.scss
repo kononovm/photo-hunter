@@ -78,3 +78,50 @@
 		}
 	}
 }
+
+@media only screen and (max-width : 1279px) {
+	.header {
+		&__nav {
+			display: none;
+		}
+		&__menu {
+			display: block;
+			margin-left: 20px;
+			i {
+				font-size: 30px;
+				color: #fff;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.header {
+		background: none;
+		box-shadow: none;
+		padding: 14px 20px 0 20px;
+		height: auto;
+		&__phone {
+			display: none;
+			&--hidden {
+				display: block;
+				color: #fff;
+				margin-left: 20px;
+				i {
+					font-size: 30px;
+				}
+			}
+		}
+		&__logo {
+			img {
+				width: 40px;
+				height: 40px;
+			}
+			p {
+				padding-left: 10px;
+				margin-left: 10px;
+				font-size: 12px;
+			}
+		}
+	}
+}
