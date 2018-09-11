@@ -66,7 +66,8 @@
 			background: url('../img/bg-mobile.jpg') no-repeat;
 			background-size: cover;
 			background-position: center;
-			height: 480px;
+			height: 100vh;
+			min-height: 480px;
 			display: flex;
 			flex-direction: column;
 		}
@@ -74,13 +75,13 @@
 			display: none;
 		}
 		&__title {
-			font-size: 15px;
-			text-transform: uppercase;
+			font-size: 17px;
+			margin-bottom: 0;
 			text-shadow: none;
 		}
 		&__subtitle {
 			width: auto;
-			font-size: 14px;
+			font-size: 16px;
 		}
 		&__hidden-act {
 			display: block;
